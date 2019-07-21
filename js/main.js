@@ -1,4 +1,5 @@
 
+/* form */
 $('body').on('click', '.tabs a', function (e) {
   e.preventDefault();
 
@@ -51,7 +52,7 @@ $('.menu a[href*="#"]').on('click', function(e) {
   }, 1350);
 });
 
-
+/* Toggle Menu*/
 
 $(document).ready(function () {
 
@@ -66,5 +67,31 @@ $(document).ready(function () {
   });
 
 });
+
+
+
+
+
+/* Form Change - Choose-Form 1 (Service) */
+$('body').on('change', '#choose-form1', function(e) {
+  $('.content .tabs1 a.active').removeClass('active');
+  $('.tabs1 a[data-to="' + $(this).val() + '"]').addClass('active');
+
+  $('.tab-content .form.active').removeClass('active');
+  $($(this).val()).addClass('active')
+
+});
+
+$('body').on('click', '.content .tabs1 a', function(e) {
+  e.preventDefault();
+
+  $('.content .tabs1 a.active').removeClass('active');
+  $(this).addClass('active');
+  $('.tab-content .form.active').removeClass('active');
+  $($(this).data('to')).addClass('active');
+  $('#choose-form1').val($(this).data('to'))
+});
+
+
 
 

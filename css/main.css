@@ -263,7 +263,7 @@ header {
   position: relative;
   z-index: 9999;
   width: 100%;
-  border: 4px solid black;
+  border: 1px solid white;
   background-color: #fff; }
   @media screen and (max-width: 450px) {
     .container {
@@ -298,7 +298,7 @@ section {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  border-bottom: 2px solid #ededef; }
+  border-bottom: 2px solid white; }
   @media screen and (min-width: 0) and (max-width: 899px) {
     section {
       padding: 63px 0; } }
@@ -357,6 +357,9 @@ section {
   margin-top: 189px;
   display: flex;
   padding: 0; }
+  @media screen and (min-width: 0) and (max-width: 899px) {
+    .new-section-1 {
+      margin-top: 189px !important; } }
   .new-section-1 h1 {
     width: 80%;
     font-family: "lato-black";
@@ -435,7 +438,7 @@ section {
   padding: 0; }
   @media screen and (min-width: 0) and (max-width: 899px) {
     .new-section-2 {
-      margin-top: 0; } }
+      margin-top: 63px !important; } }
   .new-section-2 h1 {
     width: 80%;
     font-family: "lato-black";
@@ -540,7 +543,7 @@ section {
   padding: 0; }
   @media screen and (min-width: 0) and (max-width: 899px) {
     .new-section-3 {
-      margin-top: 0; } }
+      margin-top: 63px !important; } }
   .new-section-3 h1 {
     text-transform: uppercase;
     margin: 65px 0 0 25px;
@@ -567,25 +570,34 @@ section {
       font-size: 13px;
       text-transform: uppercase;
       margin-top: 13px; }
-  .new-section-3 .flex {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 95%;
-    margin: 1em auto; }
+  @media screen and (min-width: 0) and (max-width: 899px) {
+    .new-section-3 .content {
+      display: none; } }
+  .new-section-3 .select-1 {
+    display: none; }
     @media screen and (min-width: 0) and (max-width: 899px) {
-      .new-section-3 .flex {
-        flex-direction: column; } }
-    .new-section-3 .flex article {
-      border: 1px solid black;
-      width: 30%;
-      height: 370px; }
+      .new-section-3 .select-1 {
+        display: block;
+        margin-top: 1.5em;
+        width: 100%; } }
+  .new-section-3 .tab-content {
+    width: 100%; }
+    .new-section-3 .tab-content .form .flex {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 95%;
+      margin: 1em auto; }
       @media screen and (min-width: 0) and (max-width: 899px) {
-        .new-section-3 .flex article {
-          width: 100%; } }
-    .new-section-3 .flex p {
-      width: 100%;
-      text-align: right; }
+        .new-section-3 .tab-content .form .flex {
+          flex-direction: column; } }
+      .new-section-3 .tab-content .form .flex article {
+        border: 1px solid gray;
+        width: 30%;
+        height: 370px; }
+        @media screen and (min-width: 0) and (max-width: 899px) {
+          .new-section-3 .tab-content .form .flex article {
+            width: 100%; } }
 
 /* section specialization => Third Section  - Specialities */
 .new-section-4 {
@@ -594,7 +606,7 @@ section {
   margin-top: 6em; }
   @media screen and (min-width: 0) and (max-width: 899px) {
     .new-section-4 {
-      margin-top: 0; } }
+      margin-top: 63px !important; } }
   .new-section-4 h1 {
     font-family: "lato-black";
     width: 100%;
@@ -604,11 +616,18 @@ section {
     line-height: 1.29em; }
     @media screen and (min-width: 0) and (max-width: 899px) {
       .new-section-4 h1 {
-        width: 100%; } }
+        width: 100%;
+        margin: 0 !important; } }
   .new-section-4 .flex {
     justify-content: flex-start;
     margin: 0 auto;
-    width: 93%; }
+    width: 93%;
+    display: flex;
+    flex-direction: row; }
+    @media screen and (min-width: 0) and (max-width: 899px) {
+      .new-section-4 .flex {
+        flex-direction: column;
+        margin-top: 3em; } }
     .new-section-4 .flex .box {
       width: 20%;
       box-sizing: border-box;
@@ -617,6 +636,10 @@ section {
       margin: 63px auto;
       flex-basis: auto;
       flex-grow: 1; }
+      @media screen and (min-width: 0) and (max-width: 899px) {
+        .new-section-4 .flex .box {
+          margin: 0 auto;
+          width: 100%; } }
       .new-section-4 .flex .box .rounded {
         width: 130px;
         height: 130px;
@@ -629,19 +652,22 @@ section {
         margin-top: -20px;
         font-size: 15px; }
 
-/* section specialization => Fourth Section - Contact */
+/* section specialization => Fifth Section - Contact */
 .new-section-5 {
   display: flex;
   padding: 0;
   margin-top: 189px; }
   @media screen and (min-width: 0) and (max-width: 899px) {
     .new-section-5 {
-      margin-top: 0; } }
+      margin-top: 63px !important; } }
   .new-section-5 h1 {
     margin: 1.5em 0 0 0.7em;
     font-family: "lato-black";
     font-size: 37px;
     text-transform: uppercase; }
+    @media screen and (min-width: 0) and (max-width: 899px) {
+      .new-section-5 h1 {
+        margin: 0 !important; } }
   .new-section-5 .content {
     margin-top: 3em;
     width: 100%; }
