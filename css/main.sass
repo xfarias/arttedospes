@@ -403,7 +403,7 @@ section
 
 	h1
 		width: 320px
-		outline: 1px solid black
+
 		position: relative
 
 		+breakpoint($xxs-to-lg)
@@ -414,11 +414,11 @@ section
 
 	.content
 		flex: 0.95
-		outline: 1px solid black
+
 		+breakpoint($xxs-to-lg)
 			width: 100%
 			margin-top: $half-spacing
-			outline: 1px solid black
+
 
 		+breakpoint($xs)
 			margin-top: $half-spacing /2
@@ -436,7 +436,7 @@ section
 	display: flex
 	flex-flow: row wrap
 	justify-content: space-between
-	outline: 1px solid black
+
 
 	+breakpoint($xs)
 		margin-top: $half-spacing
@@ -445,18 +445,18 @@ section
 .clearflex
 	width: 100%
 	margin-top: $spacing
-	outline: 1px solid black
 
 
-/* section specialization => First Section */
+
+/* section specialization => First Section - Presentation */
 .new-section-1
 	margin-top: $triple-spacing
-	outline: 1px solid black
+
 	display: flex
 	padding: 0
 
 	h1
-		outline: 1px solid black
+
 		width: 80%
 		font-family: 'lato-black'
 		font-weight: 600
@@ -469,7 +469,7 @@ section
 			text-align: left
 			font-size: 38px
 	p
-		outline: 1px solid black
+
 		width: 70%
 		margin: 40px 0 0 70px
 		line-height: 1.65em
@@ -483,12 +483,11 @@ section
 		margin-top: $double-spacing
 		flex-direction: column
 	+breakpoint($sm-to-lg)
-		outline: 1px solid black
+
 		flex-direction: row
 		margin-top: $triple-spacing
 	.container-img
 		height: 460px
-		outline: 1px solid black
 		flex: 1
 		width: 100%
 		position: relative
@@ -500,7 +499,6 @@ section
 			background-color: #2e34a0
 			height: 320px
 			width: 80%
-			border: 1px solid black
 			border-radius: 5px
 			margin: 62px 0 0 30px
 			position: relative
@@ -508,18 +506,15 @@ section
 		.img-2
 			position: absolute
 			background-color: black
-			border: 1px solid black
 			height: 325px
 			width: 80%
 			z-index: 1
-			border: 1px solid black
 			border-radius: 3px
 			top: 130px
 			left: 100px
 			clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%)
 	.container-text
 		height: 460px
-		outline: 1px solid black
 		flex: 1
 		width: 100%
 		+breakpoint($sm-to-lg)
@@ -527,16 +522,14 @@ section
 		+breakpoint($xxs-to-lg)
 			height: auto
 
-/* section specialization => Second Section */
+/* section specialization => Second Section - History */
 .new-section-2
 	margin-top: $triple-spacing
-	outline: 1px solid black
 	display: flex
 	padding: 0
 	+breakpoint($xxs-to-lg)
 		margin-top: 0
 	h1
-		outline: 1px solid black
 		width: 80%
 		font-family: 'lato-black'
 		font-weight: 600
@@ -552,7 +545,6 @@ section
 			font-size: 38px
 
 	p
-		outline: 1px solid black
 		width: 80%
 		margin: 65px 0 0 22px
 		line-height: 1.35em
@@ -567,12 +559,10 @@ section
 		margin-top: $double-spacing
 		flex-direction: column
 	+breakpoint($sm-to-lg)
-		outline: 1px solid black
 		flex-direction: row
 		margin-top: $triple-spacing
 	.container-img
 		height: 460px
-		outline: 1px solid black
 		flex: 1
 		width: 100%
 		position: relative
@@ -596,7 +586,6 @@ section
 			width: 28%
 			top: 92px
 			left: 40px
-			border: 1px solid black
 			border-radius: 5px
 			position: absolute
 			z-index: 1
@@ -607,7 +596,6 @@ section
 			width: 46%
 			top: 229px
 			left: 280px
-			border: 1px solid black
 			border-radius: 5px
 			position: relative
 			z-index: -99999
@@ -619,13 +607,11 @@ section
 			width: 19%
 			top: 388px
 			left: 110px
-			border: 2px solid black
 			border-radius: 5px
 			position: absolute
 			z-index: 2
 	.container-text
 		height: 460px
-		outline: 1px solid black
 		flex: 1
 		width: 90%
 		+breakpoint($sm-to-lg)
@@ -637,21 +623,16 @@ section
 			width: 100%
 
 
-
-
-
-/* section specialization => Third Section */
+/* section specialization => Third Section - Services*/
 .new-section-3
 	margin-top: $quad-spacing
-	outline: 1px solid black
 	display: flex
 	padding: 0
 	+breakpoint($xxs-to-lg)
 		margin-top: 0
 	h1
-		outline: 1px solid black
 		text-transform: uppercase
-		margin: 60px 0 0 25px
+		margin: 65px 0 0 25px
 		font-size: 37px
 		font-family: 'lato-black'
 
@@ -664,23 +645,25 @@ section
 	.content
 		ul
 			list-style: none
-			border: 1px solid black
-			height: 40px
+			height: 60px
 			display: flex
 			flex-wrap: wrap
-			width: 90%
-			margin: 60px auto
+			width: 87%
+			margin: 65px auto
 			border-radius: 5px
+			border: 1px solid #ededef
 			li
-				padding: 5px
-
+				padding: 10px
+				font-weight: 600
+				font-size: 13px
+				text-transform: uppercase
+				margin-top: 13px
 	.flex
 		display: flex
-		border: 1px solid black
 		flex-direction: row
 		flex-wrap: wrap
 		width: 95%
-		margin: 4.8em auto
+		margin: 1em auto
 		+breakpoint($xxs-to-lg)
 			flex-direction: column
 		article
@@ -690,25 +673,25 @@ section
 			+breakpoint($xxs-to-lg)
 				width: 100%
 		p
-			border: 1px solid black
+
 			width: 100%
 			text-align: right
 
 
-/* section specialization => Third Section */
+/* section specialization => Third Section  - Specialities*/
 .new-section-4
-
-	outline: 1px solid black
 	display: flex
 	padding: 0
+	margin-top: 6em
 	+breakpoint($xxs-to-lg)
 		margin-top: 0
 	h1
 		font-family: 'lato-black'
 		width: 100%
 		text-transform: uppercase
-		outline: 3px solid black
 		font-size: 37px
+		margin:  30px 0 0 28px
+		line-height: 1.29em
 
 		+breakpoint($xxs-to-lg)
 			width: 100%
@@ -716,100 +699,46 @@ section
 
 	.flex
 		justify-content: flex-start
-		margin: 0
-		outline: 4px solid black
-
+		margin: 0 auto
+		width: 93%
 
 		.box
 			width: 20%
 			box-sizing: border-box
 			text-align: center
 			padding: 0 $half-spacing
-			margin-top: $spacing
-			outline: 4px solid black
-			min-width: 160px
+			margin: $spacing auto
 			flex-basis: auto /* default value */
 			flex-grow: 1
 
 			.rounded
-				width: 100px
-				height: 100px
-				margin: 0 auto $half-spacing
+				width: 130px
+				height: 130px
+				margin: 0 auto
 				border: 4px solid black
-				border-radius: 100px
+				border-radius: 340px
+			h5
+				text-transform: uppercase
+			p
+				margin-top: -20px
+				font-size: 15px
 
-
-
-
-
-
-
-
-
-
-/* section specialization */
-
-.new-section
-	outline: 3px solid black
-	h1
-		width: 100%
-		outline: 3px solid black
-
-		+breakpoint($xxs-to-lg)
-			width: 100%
-			//text-align: center
-
-	.flex
-		justify-content: flex-start
-		margin: 0
-		outline: 4px solid black
-
-
-	.box
-		width: 20%
-		box-sizing: border-box
-		text-align: center
-		padding: 0 $half-spacing
-		margin-top: $spacing
-		outline: 4px solid black
-		min-width: 160px
-		flex-basis: auto /* default value */
-		flex-grow: 1
-
-
-		.rounded
-			width: 100px
-			height: 100px
-			margin: 0 auto $half-spacing
-			border: 4px solid black
-			border-radius: 100px
-
-
-article
-	width: calc(50% - #{$half-spacing /2})
-	background-color: $background-variant
-	border-radius: 5px
-	box-sizing: border-box
-	padding: ($half-spacing - 5) ($half-spacing - 5) ($half-spacing - 5) $spacing + $half-spacing
-	margin-bottom: $half-spacing
-	transition: transform .2s ease-in-out, min-width .4s ease-in-out, min-height .4s ease-in-out, background-color .3s ease-in-out, left .2s ease-in-out, top .4s ease-in-out
-	cursor: pointer
-	outline: 3px solid black
-
+/* section specialization => Fourth Section - Contact */
+.new-section-5
+	display: flex
+	padding: 0
+	margin-top: $triple-spacing
 	+breakpoint($xxs-to-lg)
+		margin-top: 0
+
+	h1
+		margin: 1.5em 0 0 0.7em
+		font-family: 'lato-black'
+		font-size: 37px
+		text-transform: uppercase
+	.content
+		margin-top: 3em
 		width: 100%
-
-	p
-		margin: 10px 0 0
-		font-size: 15px
-
-	&:hover
-		//transform: scale(1.02) translate3d(0,0,0)
-		background-color: #e2e2e4
-
-	.opened
-		position: absolute
-
 
 aside
 	width: 30%
@@ -831,12 +760,14 @@ aside
 			//border-bottom: 2px solid #ededef
 			font-feature-settings: "kern", "liga", "dlig", "hlig", "cswh"
 			font-synthesis: weight style
-			font-family: 'Aleo', sans-serif
-			font-size: 20px
+			font-family: 'lato-black', sans-serif
+			font-size: 16px
 			color: $primary-color
 			letter-spacing: 0.021em
 			vertical-align: top
 			position: relative
+			text-transform: uppercase
+
 
 			+breakpoint($xxs-to-lg)
 				display: none
@@ -844,6 +775,7 @@ aside
 			a
 				padding: #{$half-spacing / 1.2}
 				display: block
+				margin-top: 8px
 
 				&.active::before
 					font-family: 'FontAwesome', sans-serif
@@ -876,7 +808,7 @@ aside
 	width: 70%
 	float: left
 	box-sizing: border-box
-	padding-left: $spacing
+	margin-top: 15px
 
 	+breakpoint($xxs-to-lg)
 		width: 100%
@@ -915,7 +847,6 @@ aside
 		right: #{$half-spacing / 1.2}
 		transform: translate(0,-1px) rotate(0deg)
 		transition: transform .3s ease-in-out
-
 
 	&.active
 		&::after
@@ -968,12 +899,13 @@ form
 
 
 	input, select, option
-		width: 100%
+		width: 95%
 		padding: #{$half-spacing / 2} #{$half-spacing / 2} #{$half-spacing / 2} $half-spacing
 		border: 1px solid #8085cb
 		border-radius: 6px
 		box-sizing: border-box
 		margin-bottom: $half-spacing
+		margin-left: 8px
 		transform: scale(1)
 		transition: transform .2s ease-in-out
 		color: $font-color
@@ -987,13 +919,13 @@ form
 			border-radius: 6px
 
 	textarea
-		width: 100%
-		height: 250px
-		min-height: 250px
+		width: 95%
+		height: 200px
 		border: 1px solid #8085cb
 		text-align: left
 		padding: #{$half-spacing / 1.5} $half-spacing $half-spacing
 		border-radius: 6px
+		margin: 20px 0 0 10px
 		box-sizing: border-box
 		margin-bottom: $half-spacing
 		transform: scale(1)
@@ -1008,13 +940,12 @@ form
 			box-shadow: 0 0 3px #ddd
 
 	.flex
-		margin-top: 0
+		margin-top: 10px
 		input
-			width: calc(50% - #{$half-spacing / 2})
+			width: 45%
+			&:last-child
+				margin-right: 30px
 
-		&.auto
-			input
-				width: calc(100% - 100px - #{$half-spacing})
 .fas, .fab
 	font-size: 12px !important
 
@@ -1032,10 +963,10 @@ form
 
 
 .button
-	border-radius: 10px
+	border-radius: 7px
 	box-sizing: border-box
 	padding: #{$half-spacing / 2.5} $half-spacing #{$half-spacing / 2.5}
-	min-width: 150px
+	width: 95%
 	border: 1px solid $primary-color
 	color: $primary-color
 	text-align: center
@@ -1044,9 +975,74 @@ form
 	&.fill
 		background-color: $primary-color
 		color: #fff
+		margin: 0 0 0 10px
 	+breakpoint($xxs-to-lg)
 		border-radius: 6px
 
+
+
+/* section specialization */
+
+.new-section
+	outline: 3px solid black
+	h1
+		width: 100%
+
+
+		+breakpoint($xxs-to-lg)
+			width: 100%
+			//text-align: center
+
+	.flex
+		justify-content: flex-start
+		margin: 0
+
+
+
+	.box
+		width: 20%
+		box-sizing: border-box
+		text-align: center
+		padding: 0 $half-spacing
+		margin-top: $spacing
+
+		min-width: 160px
+		flex-basis: auto /* default value */
+		flex-grow: 1
+
+
+		.rounded
+			width: 100px
+			height: 100px
+			margin: 0 auto $half-spacing
+			border: 4px solid black
+			border-radius: 100px
+
+
+article
+	width: calc(50% - #{$half-spacing /2})
+	background-color: $background-variant
+	border-radius: 5px
+	box-sizing: border-box
+	padding: ($half-spacing - 5) ($half-spacing - 5) ($half-spacing - 5) $spacing + $half-spacing
+	margin-bottom: $half-spacing
+	transition: transform .2s ease-in-out, min-width .4s ease-in-out, min-height .4s ease-in-out, background-color .3s ease-in-out, left .2s ease-in-out, top .4s ease-in-out
+	cursor: pointer
+
+
+	+breakpoint($xxs-to-lg)
+		width: 100%
+
+	p
+		margin: 10px 0 0
+		font-size: 15px
+
+	&:hover
+		//transform: scale(1.02) translate3d(0,0,0)
+		background-color: #e2e2e4
+
+	.opened
+		position: absolute
 
 footer
 	padding: $half-spacing
@@ -1056,13 +1052,13 @@ footer
 	width: 100%
 	z-index: 0
 	bottom: 0
-	outline: 3px solid black
+
 
 	h4
 		margin-bottom: #{$half-spacing / 2}
 
 	.flex
-		outline: 4px solid black
+
 		padding-bottom: $spacing
 		text-align: left
 		+breakpoint($xxs-to-lg)

@@ -318,7 +318,6 @@ section {
     padding-bottom: 70px; }
   section h1 {
     width: 320px;
-    outline: 1px solid black;
     position: relative; }
     @media screen and (min-width: 0) and (max-width: 899px) {
       section h1 {
@@ -326,13 +325,11 @@ section {
         font-size: 30px;
         line-height: 35px; } }
   section .content {
-    flex: 0.95;
-    outline: 1px solid black; }
+    flex: 0.95; }
     @media screen and (min-width: 0) and (max-width: 899px) {
       section .content {
         width: 100%;
-        margin-top: 31.5px;
-        outline: 1px solid black; } }
+        margin-top: 31.5px; } }
     @media screen and (max-width: 450px) {
       section .content {
         margin-top: 15.75px; } }
@@ -346,25 +343,21 @@ section {
   margin-top: 63px;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
-  outline: 1px solid black; }
+  justify-content: space-between; }
   @media screen and (max-width: 450px) {
     .flex {
       margin-top: 31.5px; } }
 
 .clearflex {
   width: 100%;
-  margin-top: 63px;
-  outline: 1px solid black; }
+  margin-top: 63px; }
 
-/* section specialization => First Section */
+/* section specialization => First Section - Presentation */
 .new-section-1 {
   margin-top: 189px;
-  outline: 1px solid black;
   display: flex;
   padding: 0; }
   .new-section-1 h1 {
-    outline: 1px solid black;
     width: 80%;
     font-family: "lato-black";
     font-weight: 600;
@@ -378,7 +371,6 @@ section {
         text-align: left;
         font-size: 38px; } }
   .new-section-1 p {
-    outline: 1px solid black;
     width: 70%;
     margin: 40px 0 0 70px;
     line-height: 1.65em; }
@@ -395,12 +387,10 @@ section {
       flex-direction: column; } }
   @media screen and (min-width: 451px) and (max-width: 899px) {
     .new-section-1 {
-      outline: 1px solid black;
       flex-direction: row;
       margin-top: 189px; } }
   .new-section-1 .container-img {
     height: 460px;
-    outline: 1px solid black;
     flex: 1;
     width: 100%;
     position: relative;
@@ -413,7 +403,6 @@ section {
       background-color: #2e34a0;
       height: 320px;
       width: 80%;
-      border: 1px solid black;
       border-radius: 5px;
       margin: 62px 0 0 30px;
       position: relative;
@@ -421,18 +410,15 @@ section {
     .new-section-1 .container-img .img-2 {
       position: absolute;
       background-color: black;
-      border: 1px solid black;
       height: 325px;
       width: 80%;
       z-index: 1;
-      border: 1px solid black;
       border-radius: 3px;
       top: 130px;
       left: 100px;
       clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%); }
   .new-section-1 .container-text {
     height: 460px;
-    outline: 1px solid black;
     flex: 1;
     width: 100%; }
     @media screen and (min-width: 451px) and (max-width: 899px) {
@@ -442,17 +428,15 @@ section {
       .new-section-1 .container-text {
         height: auto; } }
 
-/* section specialization => Second Section */
+/* section specialization => Second Section - History */
 .new-section-2 {
   margin-top: 189px;
-  outline: 1px solid black;
   display: flex;
   padding: 0; }
   @media screen and (min-width: 0) and (max-width: 899px) {
     .new-section-2 {
       margin-top: 0; } }
   .new-section-2 h1 {
-    outline: 1px solid black;
     width: 80%;
     font-family: "lato-black";
     font-weight: 600;
@@ -468,7 +452,6 @@ section {
         text-align: left;
         font-size: 38px; } }
   .new-section-2 p {
-    outline: 1px solid black;
     width: 80%;
     margin: 65px 0 0 22px;
     line-height: 1.35em; }
@@ -485,12 +468,10 @@ section {
       flex-direction: column; } }
   @media screen and (min-width: 451px) and (max-width: 899px) {
     .new-section-2 {
-      outline: 1px solid black;
       flex-direction: row;
       margin-top: 189px; } }
   .new-section-2 .container-img {
     height: 460px;
-    outline: 1px solid black;
     flex: 1;
     width: 100%;
     position: relative;
@@ -515,7 +496,6 @@ section {
       width: 28%;
       top: 92px;
       left: 40px;
-      border: 1px solid black;
       border-radius: 5px;
       position: absolute;
       z-index: 1; }
@@ -526,7 +506,6 @@ section {
       width: 46%;
       top: 229px;
       left: 280px;
-      border: 1px solid black;
       border-radius: 5px;
       position: relative;
       z-index: -99999; }
@@ -537,13 +516,11 @@ section {
       width: 19%;
       top: 388px;
       left: 110px;
-      border: 2px solid black;
       border-radius: 5px;
       position: absolute;
       z-index: 2; }
   .new-section-2 .container-text {
     height: 460px;
-    outline: 1px solid black;
     flex: 1;
     width: 90%; }
     @media screen and (min-width: 451px) and (max-width: 899px) {
@@ -556,19 +533,17 @@ section {
         height: auto;
         width: 100%; } }
 
-/* section specialization => Third Section */
+/* section specialization => Third Section - Services */
 .new-section-3 {
   margin-top: 252px;
-  outline: 1px solid black;
   display: flex;
   padding: 0; }
   @media screen and (min-width: 0) and (max-width: 899px) {
     .new-section-3 {
       margin-top: 0; } }
   .new-section-3 h1 {
-    outline: 1px solid black;
     text-transform: uppercase;
-    margin: 60px 0 0 25px;
+    margin: 65px 0 0 25px;
     font-size: 37px;
     font-family: "lato-black"; }
     @media screen and (min-width: 0) and (max-width: 899px) {
@@ -579,22 +554,25 @@ section {
         font-size: 38px; } }
   .new-section-3 .content ul {
     list-style: none;
-    border: 1px solid black;
-    height: 40px;
+    height: 60px;
     display: flex;
     flex-wrap: wrap;
-    width: 90%;
-    margin: 60px auto;
-    border-radius: 5px; }
+    width: 87%;
+    margin: 65px auto;
+    border-radius: 5px;
+    border: 1px solid #ededef; }
     .new-section-3 .content ul li {
-      padding: 5px; }
+      padding: 10px;
+      font-weight: 600;
+      font-size: 13px;
+      text-transform: uppercase;
+      margin-top: 13px; }
   .new-section-3 .flex {
     display: flex;
-    border: 1px solid black;
     flex-direction: row;
     flex-wrap: wrap;
     width: 95%;
-    margin: 4.8em auto; }
+    margin: 1em auto; }
     @media screen and (min-width: 0) and (max-width: 899px) {
       .new-section-3 .flex {
         flex-direction: column; } }
@@ -606,15 +584,14 @@ section {
         .new-section-3 .flex article {
           width: 100%; } }
     .new-section-3 .flex p {
-      border: 1px solid black;
       width: 100%;
       text-align: right; }
 
-/* section specialization => Third Section */
+/* section specialization => Third Section  - Specialities */
 .new-section-4 {
-  outline: 1px solid black;
   display: flex;
-  padding: 0; }
+  padding: 0;
+  margin-top: 6em; }
   @media screen and (min-width: 0) and (max-width: 899px) {
     .new-section-4 {
       margin-top: 0; } }
@@ -622,82 +599,52 @@ section {
     font-family: "lato-black";
     width: 100%;
     text-transform: uppercase;
-    outline: 3px solid black;
-    font-size: 37px; }
+    font-size: 37px;
+    margin: 30px 0 0 28px;
+    line-height: 1.29em; }
     @media screen and (min-width: 0) and (max-width: 899px) {
       .new-section-4 h1 {
         width: 100%; } }
   .new-section-4 .flex {
     justify-content: flex-start;
-    margin: 0;
-    outline: 4px solid black; }
+    margin: 0 auto;
+    width: 93%; }
     .new-section-4 .flex .box {
       width: 20%;
       box-sizing: border-box;
       text-align: center;
       padding: 0 31.5px;
-      margin-top: 63px;
-      outline: 4px solid black;
-      min-width: 160px;
+      margin: 63px auto;
       flex-basis: auto;
       flex-grow: 1; }
       .new-section-4 .flex .box .rounded {
-        width: 100px;
-        height: 100px;
-        margin: 0 auto 31.5px;
+        width: 130px;
+        height: 130px;
+        margin: 0 auto;
         border: 4px solid black;
-        border-radius: 100px; }
+        border-radius: 340px; }
+      .new-section-4 .flex .box h5 {
+        text-transform: uppercase; }
+      .new-section-4 .flex .box p {
+        margin-top: -20px;
+        font-size: 15px; }
 
-/* section specialization */
-.new-section {
-  outline: 3px solid black; }
-  .new-section h1 {
-    width: 100%;
-    outline: 3px solid black; }
-    @media screen and (min-width: 0) and (max-width: 899px) {
-      .new-section h1 {
-        width: 100%; } }
-  .new-section .flex {
-    justify-content: flex-start;
-    margin: 0;
-    outline: 4px solid black; }
-  .new-section .box {
-    width: 20%;
-    box-sizing: border-box;
-    text-align: center;
-    padding: 0 31.5px;
-    margin-top: 63px;
-    outline: 4px solid black;
-    min-width: 160px;
-    flex-basis: auto;
-    flex-grow: 1; }
-    .new-section .box .rounded {
-      width: 100px;
-      height: 100px;
-      margin: 0 auto 31.5px;
-      border: 4px solid black;
-      border-radius: 100px; }
-
-article {
-  width: calc(50% - 15.75px);
-  background-color: #ededef;
-  border-radius: 5px;
-  box-sizing: border-box;
-  padding: 26.5px 26.5px 26.5px 94.5px;
-  margin-bottom: 31.5px;
-  transition: transform 0.2s ease-in-out, min-width 0.4s ease-in-out, min-height 0.4s ease-in-out, background-color 0.3s ease-in-out, left 0.2s ease-in-out, top 0.4s ease-in-out;
-  cursor: pointer;
-  outline: 3px solid black; }
+/* section specialization => Fourth Section - Contact */
+.new-section-5 {
+  display: flex;
+  padding: 0;
+  margin-top: 189px; }
   @media screen and (min-width: 0) and (max-width: 899px) {
-    article {
-      width: 100%; } }
-  article p {
-    margin: 10px 0 0;
-    font-size: 15px; }
-  article:hover {
-    background-color: #e2e2e4; }
-  article .opened {
-    position: absolute; }
+    .new-section-5 {
+      margin-top: 0; } }
+  .new-section-5 h1 {
+    margin: 1.5em 0 0 0.7em;
+    font-family: "lato-black";
+    font-size: 37px;
+    text-transform: uppercase; }
+  .new-section-5 .content {
+    margin-top: 3em;
+    width: 100%; }
 
 aside {
   width: 30%;
@@ -715,18 +662,20 @@ aside {
     list-style: none;
     font-feature-settings: "kern", "liga", "dlig", "hlig", "cswh";
     font-synthesis: weight style;
-    font-family: "Aleo", sans-serif;
-    font-size: 20px;
+    font-family: "lato-black", sans-serif;
+    font-size: 16px;
     color: #2e34a0;
     letter-spacing: 0.021em;
     vertical-align: top;
-    position: relative; }
+    position: relative;
+    text-transform: uppercase; }
     @media screen and (min-width: 0) and (max-width: 899px) {
       aside .tabs li {
         display: none; } }
     aside .tabs li a {
       padding: 26.25px;
-      display: block; }
+      display: block;
+      margin-top: 8px; }
       aside .tabs li a.active::before {
         font-family: "FontAwesome", sans-serif;
         font-size: 25px;
@@ -755,7 +704,7 @@ aside {
   width: 70%;
   float: left;
   box-sizing: border-box;
-  padding-left: 63px; }
+  margin-top: 15px; }
   @media screen and (min-width: 0) and (max-width: 899px) {
     .tab-content {
       width: 100%;
@@ -833,12 +782,13 @@ form {
       padding: 0;
       margin: 0; }
   form input, form select, form option {
-    width: 100%;
+    width: 95%;
     padding: 15.75px 15.75px 15.75px 31.5px;
     border: 1px solid #8085cb;
     border-radius: 6px;
     box-sizing: border-box;
     margin-bottom: 31.5px;
+    margin-left: 8px;
     transform: scale(1);
     transition: transform 0.2s ease-in-out;
     color: #7a7a7a; }
@@ -851,13 +801,13 @@ form {
       form input, form select, form option {
         border-radius: 6px; } }
   form textarea {
-    width: 100%;
-    height: 250px;
-    min-height: 250px;
+    width: 95%;
+    height: 200px;
     border: 1px solid #8085cb;
     text-align: left;
     padding: 21px 31.5px 31.5px;
     border-radius: 6px;
+    margin: 20px 0 0 10px;
     box-sizing: border-box;
     margin-bottom: 31.5px;
     transform: scale(1);
@@ -869,11 +819,11 @@ form {
       transform: scale(1.03);
       box-shadow: 0 0 3px #ddd; }
   form .flex {
-    margin-top: 0; }
+    margin-top: 10px; }
     form .flex input {
-      width: calc(50% - 15.75px); }
-    form .flex.auto input {
-      width: calc(100% - 100px - 31.5px); }
+      width: 45%; }
+      form .flex input:last-child {
+        margin-right: 30px; }
 
 .fas, .fab {
   font-size: 12px !important; }
@@ -889,20 +839,68 @@ form {
     display: inline-block; }
 
 .button {
-  border-radius: 10px;
+  border-radius: 7px;
   box-sizing: border-box;
   padding: 12.6px 31.5px 12.6px;
-  min-width: 150px;
+  width: 95%;
   border: 1px solid #2e34a0;
   color: #2e34a0;
   text-align: center;
   display: inline-block; }
   .button.fill {
     background-color: #2e34a0;
-    color: #fff; }
+    color: #fff;
+    margin: 0 0 0 10px; }
   @media screen and (min-width: 0) and (max-width: 899px) {
     .button {
       border-radius: 6px; } }
+
+/* section specialization */
+.new-section {
+  outline: 3px solid black; }
+  .new-section h1 {
+    width: 100%; }
+    @media screen and (min-width: 0) and (max-width: 899px) {
+      .new-section h1 {
+        width: 100%; } }
+  .new-section .flex {
+    justify-content: flex-start;
+    margin: 0; }
+  .new-section .box {
+    width: 20%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 0 31.5px;
+    margin-top: 63px;
+    min-width: 160px;
+    flex-basis: auto;
+    flex-grow: 1; }
+    .new-section .box .rounded {
+      width: 100px;
+      height: 100px;
+      margin: 0 auto 31.5px;
+      border: 4px solid black;
+      border-radius: 100px; }
+
+article {
+  width: calc(50% - 15.75px);
+  background-color: #ededef;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 26.5px 26.5px 26.5px 94.5px;
+  margin-bottom: 31.5px;
+  transition: transform 0.2s ease-in-out, min-width 0.4s ease-in-out, min-height 0.4s ease-in-out, background-color 0.3s ease-in-out, left 0.2s ease-in-out, top 0.4s ease-in-out;
+  cursor: pointer; }
+  @media screen and (min-width: 0) and (max-width: 899px) {
+    article {
+      width: 100%; } }
+  article p {
+    margin: 10px 0 0;
+    font-size: 15px; }
+  article:hover {
+    background-color: #e2e2e4; }
+  article .opened {
+    position: absolute; }
 
 footer {
   padding: 31.5px;
@@ -910,12 +908,10 @@ footer {
   box-sizing: border-box;
   width: 100%;
   z-index: 0;
-  bottom: 0;
-  outline: 3px solid black; }
+  bottom: 0; }
   footer h4 {
     margin-bottom: 15.75px; }
   footer .flex {
-    outline: 4px solid black;
     padding-bottom: 63px;
     text-align: left; }
     @media screen and (min-width: 0) and (max-width: 899px) {
