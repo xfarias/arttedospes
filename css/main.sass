@@ -5,30 +5,29 @@
  *	Responsive Settings
  * =============================================
 
-$xs-height: ( height-max: 400px )
-$height: ( height-min: 800px,  width-max: 599px )
-$vh: ( height-max: 790px )
+$xs-height: (height-max: 400px)
+$height: (height-min: 800px, width-max: 599px)
+$vh: (height-max: 790px)
 
-$xxs: ( max:  449px )
-$xs: ( max:  450px )
-$sm: ( min:  451px )
-$md: ( min:  600px )
-$lg: ( min: 900px )
-$xl: ( min: 1000px )
-$xxl: ( min: 1200px )
-$xxxl: ( min: 1400px )
-$til-xl: ( max: 1180px )
+$xxs: (max: 449px)
+$xs: (max: 450px)
+$sm: (min: 451px)
+$md: (min: 600px)
+$lg: (min: 900px)
+$xl: (min: 1000px)
+$xxl: (min: 1200px)
+$xxxl: (min: 1400px)
+$til-xl: (max: 1180px)
 
-$xxs-to-sm: ( min: map-get($sm, min), max: map-get($md, min) - 1 )
-$md-only: ( min: map-get($md, min), max: map-get($lg, min) - 1 )
-$lg-only: ( min: map-get($lg, min), max: map-get($xl, min) - 1 )
-$xl-only: ( min: map-get($xl, min), max: map-get($xxl, min) - 1 )
-$xxs-to-lg: ( min: 0, max: map-get($lg, min) - 1 )
-$xxs-to-sm: ( min: 0, max: map-get($sm, min) - 1 )
-$lg-to-xxl: ( min: map-get($lg, min), max: map-get($xxl, min) - 1 )
-$sm-to-md: ( min: map-get($sm, min), max: map-get($md, min) - 1 )
-$sm-to-lg: ( min: map-get($sm, min), max: map-get($lg, min) - 1 )
-
+$xxs-to-sm: (min: map-get($sm, min), max: map-get($md, min) - 1)
+$md-only: (min: map-get($md, min), max: map-get($lg, min) - 1)
+$lg-only: (min: map-get($lg, min), max: map-get($xl, min) - 1)
+$xl-only: (min: map-get($xl, min), max: map-get($xxl, min) - 1)
+$xxs-to-lg: (min: 0, max: map-get($lg, min) - 1)
+$xxs-to-sm: (min: 0, max: map-get($sm, min) - 1)
+$lg-to-xxl: (min: map-get($lg, min), max: map-get($xxl, min) - 1)
+$sm-to-md: (min: map-get($sm, min), max: map-get($md, min) - 1)
+$sm-to-lg: (min: map-get($sm, min), max: map-get($lg, min) - 1)
 
 
 /* =============================================
@@ -65,22 +64,23 @@ html
 	text-shadow: none
 
 
-
 ::-webkit-input-placeholder
-	color:  $font-gray
+	color: $font-gray
 
 /* Form Settings */
 
 input:-moz-placeholder,
-textarea:-moz-placeholder  /* Firefox 18- */
+textarea:-moz-placeholder
+	/* Firefox 18- */
 	color: $font-gray
 
-::-moz-placeholder   /* Firefox 19+ */
-	color:  $font-gray
+::-moz-placeholder
+	/* Firefox 19+ */
+	color: $font-gray
 
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder
-	color:  $font-gray
+	color: $font-gray
 
 .hidden
 	display: none !important
@@ -95,6 +95,7 @@ textarea:-ms-input-placeholder
 		display: table
 
 	/* 2
+
 	&:after
 		content: " "
 		/* 1
@@ -170,6 +171,7 @@ nav
 
 		img
 			margin: 10px 0 0 55px
+
 		+breakpoint($xxs-to-lg)
 			text-align: left
 			flex: 1
@@ -206,6 +208,7 @@ nav
 		ul
 			width: 70%
 			padding: 0
+
 			li
 				padding: 6px
 				line-height: 2px
@@ -218,6 +221,7 @@ nav
 		+breakpoint($sm-to-lg)
 			display: none
 			border: 1px solid black
+
 		li
 			a
 				color: $white
@@ -258,8 +262,9 @@ header
 		height: 120vh
 
 	+breakpoint($lg-to-xxl)
-		padding: $double-spacing  $half-spacing $spacing + $half-spacing
+		padding: $double-spacing $half-spacing $spacing + $half-spacing
 		height: 70vh
+
 	.container
 		margin: 0
 
@@ -292,6 +297,7 @@ header
 		+breakpoint($xl)
 			font-size: 90px
 			line-height: 85px
+
 .menu
 	+breakpoint($xxs-to-sm)
 		display: none
@@ -319,8 +325,10 @@ header
 			.bar1
 				-webkit-transform: rotate(-45deg) translate(-2px, 6px)
 				transform: rotate(-45deg) translate(-2px, 6px)
+
 			.bar2
 				opacity: 0
+
 			.bar3
 				-webkit-transform: rotate(45deg) translate(-6px, -9px)
 				transform: rotate(45deg) translate(-5px, -9px)
@@ -348,7 +356,6 @@ header
 
 	+breakpoint($xs)
 		padding: 0 #{$spacing / 2} #{$spacing / 2}
-
 
 
 h1, h2
@@ -450,7 +457,6 @@ section
 	margin-top: $spacing
 
 
-
 /* section specialization => First Section - Presentation */
 .new-section-1
 	margin-top: $triple-spacing + 1px
@@ -472,6 +478,7 @@ section
 			width: 100%
 			text-align: left
 			font-size: 38px
+
 	p
 
 		width: 70%
@@ -481,14 +488,17 @@ section
 			margin: 20px auto
 			width: 100%
 			text-align: left
+
 	&:first-of-type
 		padding-top: 0
+
 	+breakpoint($xxs-to-lg)
 		margin-top: $double-spacing
 		flex-direction: column
 	+breakpoint($sm-to-lg)
 		flex-direction: row
 		margin-top: $triple-spacing
+
 	.container-img
 		height: 460px
 		flex: 1
@@ -497,6 +507,7 @@ section
 		display: flex
 		+breakpoint($xxs-to-lg)
 			display: none
+
 		.img-1
 			clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%)
 			background-color: $font-green !important
@@ -506,6 +517,7 @@ section
 			margin: 62px 0 0 30px
 			position: relative
 			z-index: -9999
+
 		.img-2
 			position: absolute
 			background-color: $font-green-light !important
@@ -516,6 +528,7 @@ section
 			top: 130px
 			left: 100px
 			clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%)
+
 	.container-text
 		height: 460px
 		flex: 1
@@ -532,6 +545,7 @@ section
 	padding: 0
 	+breakpoint($xxs-to-lg)
 		margin-top: $spacing !important
+
 	h1
 		width: 80%
 		font-family: 'lato-black'
@@ -559,12 +573,14 @@ section
 
 	&:first-of-type
 		padding-top: 0
+
 	+breakpoint($xxs-to-lg)
 		margin-top: $double-spacing
 		flex-direction: column
 	+breakpoint($sm-to-lg)
 		flex-direction: row
 		margin-top: $triple-spacing
+
 	.container-img
 		height: 460px
 		flex: 1
@@ -573,6 +589,7 @@ section
 		display: flex
 		+breakpoint($xxs-to-lg)
 			display: none
+
 		.img-1
 			clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%)
 			background-color: $font-green-light !important
@@ -583,6 +600,7 @@ section
 			margin: 42px 0 0 55px
 			position: absolute
 			z-index: -999
+
 		.img-2
 			clip-path: polygon(13% 0, 98% 0, 83% 100%, 0% 100%)
 			background-color: $font-green !important
@@ -593,6 +611,7 @@ section
 			border-radius: 5px
 			position: absolute
 			z-index: 1
+
 		.img-3
 			clip-path: polygon(19% 0, 100% 0, 100% 100%, 0% 100%)
 			background-color: $font-green !important
@@ -603,6 +622,7 @@ section
 			border-radius: 5px
 			position: relative
 			z-index: -99999
+
 		.img-4
 			clip-path: polygon(13% 0, 89% 0, 73% 100%, 0 100%)
 			background-color: $font-green !important
@@ -613,6 +633,7 @@ section
 			border-radius: 5px
 			position: absolute
 			z-index: 2
+
 	.container-text
 		height: 460px
 		flex: 1
@@ -633,12 +654,12 @@ section
 	padding: 0
 	+breakpoint($xxs-to-lg)
 		margin-top: $spacing !important
+
 	h1
 		text-transform: uppercase
 		margin: 65px 0 0 25px
 		font-size: 37px
 		font-family: 'lato-black'
-
 		+breakpoint($xxs-to-lg)
 			margin: 0 auto
 			width: 100%
@@ -660,8 +681,12 @@ section
 				font-size: 13px
 				text-transform: uppercase
 				margin-top: 13px
+				a
+					color: $font-gray
+					&:hover
+						color: $font-green
 		+breakpoint($xxs-to-lg)
-				display: none
+			display: none
 
 	.select-1
 		display: none
@@ -683,7 +708,7 @@ section
 				+breakpoint($xxs-to-lg)
 					flex-direction: column
 				article
-					border: 1px solid gray
+					border: 1px solid $font-gray
 					width: 30%
 					height: 370px
 					+breakpoint($xxs-to-lg)
@@ -694,16 +719,18 @@ section
 /* section specialization => Third Section  - Specialities*/
 .new-section-4
 	display: flex
+
 	padding: 0
 	margin-top: 8.2em
 	+breakpoint($xxs-to-lg)
 		margin-top: $spacing !important
+
 	h1
 		font-family: 'lato-black'
 		width: 100%
 		text-transform: uppercase
 		font-size: 37px
-		margin:  40px 0 0 28px
+		margin: 40px 0 0 28px
 		line-height: 1.29em
 		+breakpoint($xxs-to-lg)
 			width: 100%
@@ -718,13 +745,15 @@ section
 		+breakpoint($xxs-to-lg)
 			flex-direction: column
 			margin-top: 3em
+
 		.box
 			width: 20%
 			box-sizing: border-box
 			text-align: center
 			padding: 0 $half-spacing
 			margin: $spacing auto
-			flex-basis: auto /* default value */
+			flex-basis: auto
+			/* default value */
 			flex-grow: 1
 			+breakpoint($xxs-to-lg)
 				margin: 0 auto
@@ -736,9 +765,11 @@ section
 				margin: 0 auto
 				border: 1px solid black
 				border-radius: 340px
+
 			h5
 				text-transform: uppercase
 				color: $font-green
+
 			p
 				margin-top: -20px
 				font-size: 15px
@@ -760,9 +791,11 @@ section
 		text-transform: uppercase
 		+breakpoint($xxs-to-lg)
 			margin: 0 !important
+
 	.content
 		margin-top: 3em
 		width: 100%
+
 		p
 			margin: 32px 0 0 0
 		+breakpoint($xxs-to-lg)
@@ -814,16 +847,16 @@ aside
 					display: inline-block
 					position: absolute
 					right: $half-spacing
-					transform: translate(0,-1px)
+					transform: translate(0, -1px)
 
 			&::after
 				content: ''
 				position: absolute
 				display: inline-block
-				background: -moz-linear-gradient(90deg, rgba(237,237,239,1) 0%, rgba(255,255,255,1) 100%)
-				background: -webkit-linear-gradient(90deg, rgba(237,237,239,1) 0%, rgba(255,255,255,1) 100%)
-				background: linear-gradient(90deg, rgba(237,237,239,1) 0%, rgba(255,255,255,1) 100%)
-				filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ededef",endColorstr="#ffffff",GradientType=1)
+				background: -moz-linear-gradient(90deg, rgba(237, 237, 239, 1) 0%, rgba(255, 255, 255, 1) 100%)
+				background: -webkit-linear-gradient(90deg, rgba(237, 237, 239, 1) 0%, rgba(255, 255, 255, 1) 100%)
+				background: linear-gradient(90deg, rgba(237, 237, 239, 1) 0%, rgba(255, 255, 255, 1) 100%)
+				filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ededef", endColorstr="#ffffff", GradientType=1)
 				height: 2px
 				width: 100%
 				box-sizing: border-box
@@ -875,19 +908,21 @@ aside
 		display: inline-block
 		position: absolute
 		right: #{$half-spacing / 1.2}
-		transform: translate(0,-1px) rotate(0deg)
+		transform: translate(0, -1px) rotate(0deg)
 		transition: transform .3s ease-in-out
 
 	&.active
 		&::after
-			transform: translate(0,-1px) rotate(90deg)
+			transform: translate(0, -1px) rotate(90deg)
 
 .accordion-content
 	display: none
 	padding-bottom: $half-spacing
 	font-weight: normal
+
 select::-ms-expand
-	display: none /* hide the default arrow in ie10 and ie11 */
+	display: none
+/* hide the default arrow in ie10 and ie11 */
 
 form
 	width: 100%
@@ -899,12 +934,14 @@ form
 	.select
 		position: relative
 		width: auto
+
 		.fas
 			position: absolute
 			right: $half-spacing
 			top: #{$half-spacing / 1.6}
 			font-size: 17px !important
 			color: $font-gray
+
 	select
 		padding: 0
 		margin: 0
@@ -946,6 +983,7 @@ form
 			border: 1px solid $font-gray
 			transform: scale(1.03)
 			box-shadow: 0 0 3px #ddd
+
 		+breakpoint($xxs-to-lg)
 			border-radius: 6px
 
@@ -974,11 +1012,13 @@ form
 	.flex
 		margin-top: 5px
 		color: $font-gray !important
+
 		#tel
 			margin: 20px 30px 0 0px
+
 		+breakpoint($xxs-to-lg)
 			#tel
-				margin: 0px 0px 0 10px
+				margin: 20px 0px 0 10px
 
 		input
 			width: 45%
@@ -990,11 +1030,10 @@ form
 				margin: 15px 0 0 10px
 
 
-
-
 .fas, .fab
 	font-size: 12px !important
 	color: $font-gray
+
 	&.left
 		margin-right: 6px
 		top: -2px
@@ -1030,23 +1069,22 @@ form
 			margin: 10px 0 0 10px
 
 
-
 /* section specialization */
 
 .new-section
 	outline: 3px solid black
+
 	h1
 		width: 100%
 
 
 		+breakpoint($xxs-to-lg)
 			width: 100%
-			//text-align: center
+	//text-align: center
 
 	.flex
 		justify-content: flex-start
 		margin: 0
-
 
 
 	.box
@@ -1057,7 +1095,8 @@ form
 		margin-top: $spacing
 
 		min-width: 160px
-		flex-basis: auto /* default value */
+		flex-basis: auto
+		/* default value */
 		flex-grow: 1
 
 
@@ -1114,11 +1153,14 @@ footer
 		+breakpoint($xxs-to-lg)
 			display: flex
 			flex-direction: column
+
 		.logo
 			width: 20%
 			margin: 0.5em auto
+
 			img
 				margin: 0.95em auto
+
 			+breakpoint($xxs-to-lg)
 				width: 100%
 
@@ -1145,60 +1187,70 @@ footer
 		margin: 0 auto
 		+breakpoint($xxs-to-lg)
 			width: 100%
+
 .see-more
 	position: absolute
-	transform: translate3d(-5px,$spacing, 35px)
+	transform: translate3d(-5px, $spacing, 35px)
 	+breakpoint($xxs-to-sm)
-		transform: translate3d(-5px,$spacing+20px, 35px)
+		transform: translate3d(-5px, $spacing+20px, 35px)
+
 	.fas
 		font-size: 15px !important
 		top: 0
 
 .menu-full
-		transform: translate(0,100%)
-		opacity: 0
-		position: fixed
+	transform: translate(0, 100%)
+	opacity: 0
+	position: fixed
+	width: 100%
+	height: 100%
+	background-color: #4c4c4c
+	z-index: 999999
+	color: #fff
+	box-sizing: border-box
+	-webkit-transition: transform 0s linear .2s, opacity .2s ease-in-out
+	-moz-transition: transform 0s linear .2s, opacity .2s ease-in-out
+	-ms-transition: transform 0s linear .2s, opacity .2s ease-in-out
+	-o-transition: transform 0s linear .2s, opacity .2s ease-in-out
+	transition: transform 0s linear .2s, opacity .2s ease-in-out
+
+	&.opened
+		transform: translate(0, 0)
+		opacity: 1
+		-webkit-transition: opacity .2s ease-in-out
+		-moz-transition: opacity .2s ease-in-out
+		-ms-transition: opacity .2s ease-in-out
+		-o-transition: opacity .2s ease-in-out
+		transition: opacity .2s ease-in-out
 		width: 100%
-		height: 100%
-		background-color: #4c4c4c
-		z-index: 999999
-		color: #fff
-		box-sizing: border-box
-		-webkit-transition: transform 0s linear .2s, opacity .2s ease-in-out
-		-moz-transition: transform 0s linear .2s, opacity .2s ease-in-out
-		-ms-transition: transform 0s linear .2s, opacity .2s ease-in-out
-		-o-transition: transform 0s linear .2s, opacity .2s ease-in-out
-		transition: transform 0s linear .2s, opacity .2s ease-in-out
-		&.opened
-			transform: translate(0,0)
-			opacity: 1
-			-webkit-transition: opacity .2s ease-in-out
-			-moz-transition: opacity .2s ease-in-out
-			-ms-transition: opacity .2s ease-in-out
-			-o-transition: opacity .2s ease-in-out
-			transition: opacity .2s ease-in-out
-			width: 110%
-			margin: -4.2em 0 0 -3em
+		margin: -4em 0 0 -21.5em
+		color: white
+		position: fixed
+
+		ul
+			display: flex
+			flex-direction: column
+			width: 100%
+			margin: 6em auto
 			color: white
-			position: fixed
-			ul
-				display: flex
-				flex-direction: column
-				width: 100%
-				margin: 6em auto
+
+			li
+				height: 40px
+				font-size: 14pt
 				color: white
-				li
-					height: 40px
-					font-size: 14pt
+
+				a
+					list-style: none
+					display: block
+					text-align: left
 					color: white
-
-					a
-						list-style: none
-						display: block
-						text-align: left
-						color: white
-						margin-left: 30px
-						text-transform: uppercase
-						font-family: 'lato-black'
+					margin-left: 30px
+					text-transform: uppercase
+					font-family: 'lato-black'
 
 
+.tabb
+	display: none
+
+	&.active
+		display: block

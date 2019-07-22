@@ -14,15 +14,7 @@ $(".accordion").on("click", ".accordion-header", function() {
   $(this).toggleClass("active").next().slideToggle();
 });
 
-$('body').on('click', '.has-items', function (e) {
-  e.preventDefault();
 
-  $('svg .active').removeClass('active');
-  $(this).addClass('active');
-  $('.state-sellers').removeClass('active');
-  $($(this).data('to')).addClass('active')
-
-});
 
 $('body').on('change', '#choose-form', function (e) {
   $('.tabs a.active').removeClass('active');
@@ -71,26 +63,28 @@ $(document).ready(function () {
 
 
 
-
 /* Form Change - Choose-Form 1 (Service) */
-$('body').on('change', '#choose-form1', function(e) {
-  $('.content .tabs1 a.active').removeClass('active');
-  $('.tabs1 a[data-to="' + $(this).val() + '"]').addClass('active');
+$('body').on('click', '.tabs1 a', function (e) {
+  e.preventDefault();
 
+  $('.tabs1 a.active').removeClass('active');
+  $(this).addClass('active');
+  // $('.tab-content-1 .form.active').removeClass('active');
+  $('.tabb').removeClass('active');
+  $($(this).data('to')).addClass('active');
+  $('#choose-form1').val($(this).data('to'))
+});
+
+
+
+$('body').on('change', '#choose-form1', function (e) {
+  $('.tabs1 a.active').removeClass('active');
+  $('.tabs1 a[data-to="'+ $(this).val() +'"]').addClass('active');
   $('.tab-content-1 .form.active').removeClass('active');
   $($(this).val()).addClass('active')
 
 });
 
-$('body').on('click', '.content .tabs1 a', function(e) {
-  e.preventDefault();
-
-  $('.content .tabs1 a.active').removeClass('active');
-  $(this).addClass('active');
-  $('.tab-content-1 .form.active').removeClass('active');
-  $($(this).data('to')).addClass('active');
-  $('#choose-form1').val($(this).data('to'))
-});
 
 
 
