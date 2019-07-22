@@ -18,19 +18,19 @@ html {
   text-shadow: none; }
 
 ::-webkit-input-placeholder {
-  color: #6c71bc; }
+  color: #7b7b7b; }
 
 /* Form Settings */
 input:-moz-placeholder,
 textarea:-moz-placeholder {
-  color: #6c71bc; }
+  color: #7b7b7b; }
 
 ::-moz-placeholder {
-  color: #6c71bc; }
+  color: #7b7b7b; }
 
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
-  color: #6c71bc; }
+  color: #7b7b7b; }
 
 .hidden {
   display: none !important; }
@@ -85,7 +85,7 @@ body {
       overflow: hidden; } }
 
 a, a:visited {
-  color: #2e34a0;
+  color: #7b7b7b;
   text-decoration: none; }
 
 /*  ======= MENU ======= */
@@ -113,7 +113,7 @@ nav {
         text-align: left;
         flex: 1; }
         nav .menu-image img {
-          margin-left: -13.5px; } }
+          margin-left: -33.5px; } }
     @media screen and (min-width: 451px) and (max-width: 899px) {
       nav .menu-image {
         text-align: center; } }
@@ -249,8 +249,8 @@ header {
     .sandwich {
       display: block;
       position: absolute;
-      top: 0;
-      right: 0;
+      top: 20px;
+      right: 30px;
       z-index: 9999999; } }
   @media screen and (min-width: 451px) and (max-width: 899px) {
     .sandwich {
@@ -259,7 +259,7 @@ header {
 /* Container - Main Content */
 .container {
   box-sizing: border-box;
-  padding: 0 63px 63px;
+  padding: 0px 63px 63px;
   position: relative;
   z-index: 9999;
   width: 100%;
@@ -276,7 +276,7 @@ h1, h2 {
   font-synthesis: weight style;
   font-family: "Aleo", sans-serif;
   font-size: 50px;
-  color: #2e34a0;
+  color: #54a18a;
   letter-spacing: 0.021em;
   line-height: 55px;
   vertical-align: top; }
@@ -354,7 +354,7 @@ section {
 
 /* section specialization => First Section - Presentation */
 .new-section-1 {
-  margin-top: 189px;
+  margin-top: 190px;
   display: flex;
   padding: 0; }
   @media screen and (min-width: 0) and (max-width: 899px) {
@@ -403,7 +403,7 @@ section {
         display: none; } }
     .new-section-1 .container-img .img-1 {
       clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
-      background-color: #2e34a0;
+      background-color: #54a18a !important;
       height: 320px;
       width: 80%;
       border-radius: 5px;
@@ -412,7 +412,7 @@ section {
       z-index: -9999; }
     .new-section-1 .container-img .img-2 {
       position: absolute;
-      background-color: black;
+      background-color: #68d5b4 !important;
       height: 325px;
       width: 80%;
       z-index: 1;
@@ -433,7 +433,7 @@ section {
 
 /* section specialization => Second Section - History */
 .new-section-2 {
-  margin-top: 189px;
+  margin-top: 191px;
   display: flex;
   padding: 0; }
   @media screen and (min-width: 0) and (max-width: 899px) {
@@ -443,7 +443,7 @@ section {
     width: 80%;
     font-family: "lato-black";
     font-weight: 600;
-    margin: 40px 0 0 21px;
+    margin: 40px 0 0 22px;
     font-size: 40px;
     line-height: 1.15em;
     letter-spacing: -0.03em;
@@ -461,6 +461,7 @@ section {
     @media screen and (min-width: 0) and (max-width: 899px) {
       .new-section-2 p {
         margin: 20px auto;
+        line-height: 1.65em;
         width: 100%;
         text-align: left; } }
   .new-section-2:first-of-type {
@@ -484,17 +485,17 @@ section {
         display: none; } }
     .new-section-2 .container-img .img-1 {
       clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
-      background-color: #2e34a0;
+      background-color: #68d5b4 !important;
       height: 290px;
       width: 71%;
-      border: 1px solid black;
+      border: 1px solid #68d5b4;
       border-radius: 5px;
       margin: 42px 0 0 55px;
       position: absolute;
       z-index: -999; }
     .new-section-2 .container-img .img-2 {
       clip-path: polygon(13% 0, 98% 0, 83% 100%, 0% 100%);
-      background-color: #888888;
+      background-color: #54a18a !important;
       height: 94px;
       width: 28%;
       top: 92px;
@@ -504,7 +505,7 @@ section {
       z-index: 1; }
     .new-section-2 .container-img .img-3 {
       clip-path: polygon(19% 0, 100% 0, 100% 100%, 0% 100%);
-      background-color: #888888;
+      background-color: #54a18a !important;
       height: 185px;
       width: 46%;
       top: 229px;
@@ -514,7 +515,7 @@ section {
       z-index: -99999; }
     .new-section-2 .container-img .img-4 {
       clip-path: polygon(13% 0, 89% 0, 73% 100%, 0 100%);
-      background-color: #888888;
+      background-color: #54a18a !important;
       height: 62px;
       width: 19%;
       top: 388px;
@@ -578,32 +579,35 @@ section {
     @media screen and (min-width: 0) and (max-width: 899px) {
       .new-section-3 .select-1 {
         display: block;
-        margin-top: 1.5em;
+        margin: 1.5em 0 0 0em;
         width: 100%; } }
-  .new-section-3 .tab-content {
+    @media screen and (min-width: 451px) and (max-width: 899px) {
+      .new-section-3 .select-1 {
+        margin: 1.5em 0 0 1em; } }
+  .new-section-3 .tab-content-1 {
     width: 100%; }
-    .new-section-3 .tab-content .form .flex {
+    .new-section-3 .tab-content-1 .form .flex {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       width: 95%;
       margin: 1em auto; }
       @media screen and (min-width: 0) and (max-width: 899px) {
-        .new-section-3 .tab-content .form .flex {
+        .new-section-3 .tab-content-1 .form .flex {
           flex-direction: column; } }
-      .new-section-3 .tab-content .form .flex article {
+      .new-section-3 .tab-content-1 .form .flex article {
         border: 1px solid gray;
         width: 30%;
         height: 370px; }
         @media screen and (min-width: 0) and (max-width: 899px) {
-          .new-section-3 .tab-content .form .flex article {
+          .new-section-3 .tab-content-1 .form .flex article {
             width: 100%; } }
 
 /* section specialization => Third Section  - Specialities */
 .new-section-4 {
   display: flex;
   padding: 0;
-  margin-top: 6em; }
+  margin-top: 8.2em; }
   @media screen and (min-width: 0) and (max-width: 899px) {
     .new-section-4 {
       margin-top: 63px !important; } }
@@ -612,7 +616,7 @@ section {
     width: 100%;
     text-transform: uppercase;
     font-size: 37px;
-    margin: 30px 0 0 28px;
+    margin: 40px 0 0 28px;
     line-height: 1.29em; }
     @media screen and (min-width: 0) and (max-width: 899px) {
       .new-section-4 h1 {
@@ -620,7 +624,7 @@ section {
         margin: 0 !important; } }
   .new-section-4 .flex {
     justify-content: flex-start;
-    margin: 0 auto;
+    margin: 0.45em auto;
     width: 93%;
     display: flex;
     flex-direction: row; }
@@ -644,13 +648,15 @@ section {
         width: 130px;
         height: 130px;
         margin: 0 auto;
-        border: 4px solid black;
+        border: 1px solid black;
         border-radius: 340px; }
       .new-section-4 .flex .box h5 {
-        text-transform: uppercase; }
+        text-transform: uppercase;
+        color: #54a18a; }
       .new-section-4 .flex .box p {
         margin-top: -20px;
-        font-size: 15px; }
+        font-size: 15px;
+        color: #7b7b7b; }
 
 /* section specialization => Fifth Section - Contact */
 .new-section-5 {
@@ -661,7 +667,7 @@ section {
     .new-section-5 {
       margin-top: 63px !important; } }
   .new-section-5 h1 {
-    margin: 1.5em 0 0 0.7em;
+    margin: 1.1em 0 0 0.75em;
     font-family: "lato-black";
     font-size: 37px;
     text-transform: uppercase; }
@@ -670,7 +676,10 @@ section {
         margin: 0 !important; } }
   .new-section-5 .content {
     margin-top: 3em;
-    width: 100%; }
+    width: 100%;
+    margin: 7px 0 0 0; }
+    .new-section-5 .content p {
+      margin: 32px 0 0 0; }
 
 aside {
   width: 30%;
@@ -701,7 +710,8 @@ aside {
     aside .tabs li a {
       padding: 26.25px;
       display: block;
-      margin-top: 8px; }
+      margin-top: 8px;
+      color: #54a18a; }
       aside .tabs li a.active::before {
         font-family: "FontAwesome", sans-serif;
         font-size: 25px;
@@ -730,7 +740,7 @@ aside {
   width: 70%;
   float: left;
   box-sizing: border-box;
-  margin-top: 15px; }
+  margin-top: 10px; }
   @media screen and (min-width: 0) and (max-width: 899px) {
     .tab-content {
       width: 100%;
@@ -743,12 +753,12 @@ aside {
 .accordion-header {
   cursor: pointer;
   border-top: 2px solid #ededef;
-  color: #2e34a0;
+  color: #7b7b7b;
   font-feature-settings: "kern", "liga", "dlig", "hlig", "cswh";
   font-synthesis: weight style;
   font-family: "Aleo", sans-serif;
   font-size: 20px;
-  color: #2e34a0;
+  color: #7b7b7b;
   letter-spacing: 0.021em;
   vertical-align: top;
   padding: 26.25px 0 26.25px 0;
@@ -788,7 +798,7 @@ form {
       right: 31.5px;
       top: 19.6875px;
       font-size: 17px !important;
-      color: #8085cb; }
+      color: #7b7b7b; }
   form select {
     padding: 0;
     margin: 0;
@@ -810,17 +820,21 @@ form {
   form input, form select, form option {
     width: 95%;
     padding: 15.75px 15.75px 15.75px 31.5px;
-    border: 1px solid #8085cb;
+    border: 1px solid #7b7b7b;
     border-radius: 6px;
     box-sizing: border-box;
     margin-bottom: 31.5px;
-    margin-left: 8px;
+    margin: 20px 0 0 10px;
     transform: scale(1);
     transition: transform 0.2s ease-in-out;
-    color: #7a7a7a; }
+    color: #7b7b7b !important; }
+    @media screen and (min-width: 0) and (max-width: 899px) {
+      form input, form select, form option {
+        width: 95%;
+        margin: 15px 0 0 10px; } }
     form input:active, form input:focus, form select:active, form select:focus, form option:active, form option:focus {
       outline: 0;
-      border: 1px solid #2e34a0;
+      border: 1px solid #7b7b7b;
       transform: scale(1.03);
       box-shadow: 0 0 3px #ddd; }
     @media screen and (min-width: 0) and (max-width: 899px) {
@@ -829,7 +843,7 @@ form {
   form textarea {
     width: 95%;
     height: 200px;
-    border: 1px solid #8085cb;
+    border: 1px solid #7b7b7b;
     text-align: left;
     padding: 21px 31.5px 31.5px;
     border-radius: 6px;
@@ -838,21 +852,35 @@ form {
     margin-bottom: 31.5px;
     transform: scale(1);
     transition: transform 0.2s ease-in-out;
-    color: #7a7a7a; }
+    color: #7b7b7b !important; }
+    @media screen and (min-width: 0) and (max-width: 899px) {
+      form textarea {
+        margin: 15px 0 0 10px; } }
     form textarea:active, form textarea:focus {
       outline: 0;
-      border: 1px solid #2e34a0;
+      border: 1px solid #7b7b7b;
       transform: scale(1.03);
       box-shadow: 0 0 3px #ddd; }
   form .flex {
-    margin-top: 10px; }
+    margin-top: 5px;
+    color: #7b7b7b !important; }
+    form .flex #tel {
+      margin: 20px 30px 0 0px; }
+    @media screen and (min-width: 0) and (max-width: 899px) {
+      form .flex #tel {
+        margin: 0px 0px 0 10px; } }
     form .flex input {
-      width: 45%; }
-      form .flex input:last-child {
-        margin-right: 30px; }
+      width: 45%;
+      color: #7b7b7b !important;
+      margin: 20px 0 0 10px; }
+      @media screen and (min-width: 0) and (max-width: 899px) {
+        form .flex input {
+          width: 95%;
+          margin: 15px 0 0 10px; } }
 
 .fas, .fab {
-  font-size: 12px !important; }
+  font-size: 12px !important;
+  color: #7b7b7b; }
   .fas.left, .fab.left {
     margin-right: 6px;
     top: -2px;
@@ -869,17 +897,21 @@ form {
   box-sizing: border-box;
   padding: 12.6px 31.5px 12.6px;
   width: 95%;
-  border: 1px solid #2e34a0;
-  color: #2e34a0;
+  border: 1px solid #68d5b4;
+  color: white;
   text-align: center;
   display: inline-block; }
   .button.fill {
-    background-color: #2e34a0;
+    background-color: #68d5b4;
     color: #fff;
-    margin: 0 0 0 10px; }
-  @media screen and (min-width: 0) and (max-width: 899px) {
-    .button {
-      border-radius: 6px; } }
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 0px 0 0 14px; }
+    @media screen and (min-width: 0) and (max-width: 899px) {
+      .button.fill {
+        border-radius: 6px;
+        width: 95%;
+        margin: 10px 0 0 10px; } }
 
 /* section specialization */
 .new-section {
@@ -948,13 +980,15 @@ footer {
       width: 20%;
       margin: 0.5em auto; }
       footer .flex .logo img {
-        margin: 1em auto; }
+        margin: 0.95em auto; }
       @media screen and (min-width: 0) and (max-width: 899px) {
         footer .flex .logo {
           width: 100%; } }
     footer .flex .content {
-      width: 30%;
-      margin: 0.5em auto; }
+      width: 28%;
+      margin: 1em auto; }
+      footer .flex .content h6 {
+        text-transform: uppercase; }
       footer .flex .content span {
         margin-left: 15px; }
       @media screen and (min-width: 0) and (max-width: 899px) {
@@ -963,7 +997,7 @@ footer {
   footer .ending {
     border-top: #d7d7d8 2px solid;
     padding-top: 31.5px;
-    width: 95%;
+    width: 90%;
     margin: 0 auto; }
     @media screen and (min-width: 0) and (max-width: 899px) {
       footer .ending {

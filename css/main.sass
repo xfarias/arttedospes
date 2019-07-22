@@ -47,6 +47,9 @@ $color-blue: blue
 $font-color: #7a7a7a
 $background-variant: #ededef
 $white: white
+$font-green: #54a18a
+$font-gray: #7b7b7b
+$font-green-light: #68d5b4
 
 /* =============================================
  *	Reset
@@ -64,20 +67,20 @@ html
 
 
 ::-webkit-input-placeholder
-	color: #6c71bc
+	color:  $font-gray
 
 /* Form Settings */
 
 input:-moz-placeholder,
 textarea:-moz-placeholder  /* Firefox 18- */
-	color: #6c71bc
+	color: $font-gray
 
 ::-moz-placeholder   /* Firefox 19+ */
-	color: #6c71bc
+	color:  $font-gray
 
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder
-	color: #6c71bc
+	color:  $font-gray
 
 .hidden
 	display: none !important
@@ -141,7 +144,7 @@ body
 		overflow: hidden
 
 a, a:visited
-	color: $primary-color
+	color: $font-gray
 	text-decoration: none
 
 /*  ======= MENU ======= */
@@ -171,7 +174,7 @@ nav
 			text-align: left
 			flex: 1
 			img
-				margin-left: ($half-spacing - 45px)
+				margin-left: ($half-spacing - 65px)
 		+breakpoint($sm-to-lg)
 			text-align: center
 
@@ -325,8 +328,8 @@ header
 	+breakpoint($xxs-to-lg)
 		display: block
 		position: absolute
-		top: 0
-		right: 0
+		top: 20px
+		right: 30px
 		z-index: 9999999
 	+breakpoint($sm-to-lg)
 		display: none
@@ -335,7 +338,7 @@ header
 
 .container
 	box-sizing: border-box
-	padding: 0 $spacing $spacing
+	padding: 0px $spacing $spacing
 	position: relative
 	z-index: 9999
 	width: 100%
@@ -355,7 +358,7 @@ h1, h2
 	font-synthesis: weight style
 	font-family: 'Aleo', sans-serif
 	font-size: 50px
-	color: $primary-color
+	color: $font-green
 	letter-spacing: 0.021em
 	line-height: 55px
 	vertical-align: top
@@ -450,7 +453,7 @@ section
 
 /* section specialization => First Section - Presentation */
 .new-section-1
-	margin-top: $triple-spacing
+	margin-top: $triple-spacing + 1px
 	display: flex
 	padding: 0
 	+breakpoint($xxs-to-lg)
@@ -484,7 +487,6 @@ section
 		margin-top: $double-spacing
 		flex-direction: column
 	+breakpoint($sm-to-lg)
-
 		flex-direction: row
 		margin-top: $triple-spacing
 	.container-img
@@ -497,7 +499,7 @@ section
 			display: none
 		.img-1
 			clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%)
-			background-color: #2e34a0
+			background-color: $font-green !important
 			height: 320px
 			width: 80%
 			border-radius: 5px
@@ -506,7 +508,7 @@ section
 			z-index: -9999
 		.img-2
 			position: absolute
-			background-color: black
+			background-color: $font-green-light !important
 			height: 325px
 			width: 80%
 			z-index: 1
@@ -525,7 +527,7 @@ section
 
 /* section specialization => Second Section - History */
 .new-section-2
-	margin-top: $triple-spacing
+	margin-top: $triple-spacing + 2px
 	display: flex
 	padding: 0
 	+breakpoint($xxs-to-lg)
@@ -534,7 +536,7 @@ section
 		width: 80%
 		font-family: 'lato-black'
 		font-weight: 600
-		margin: 40px 0 0 21px
+		margin: 40px 0 0 22px
 		font-size: 40px
 		line-height: 1.15em
 		letter-spacing: -0.03em
@@ -551,6 +553,7 @@ section
 		line-height: 1.35em
 		+breakpoint($xxs-to-lg)
 			margin: 20px auto
+			line-height: 1.65em
 			width: 100%
 			text-align: left
 
@@ -572,17 +575,17 @@ section
 			display: none
 		.img-1
 			clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%)
-			background-color: #2e34a0
+			background-color: $font-green-light !important
 			height: 290px
 			width: 71%
-			border: 1px solid black
+			border: 1px solid $font-green-light
 			border-radius: 5px
 			margin: 42px 0 0 55px
 			position: absolute
 			z-index: -999
 		.img-2
 			clip-path: polygon(13% 0, 98% 0, 83% 100%, 0% 100%)
-			background-color: #888888
+			background-color: $font-green !important
 			height: 94px
 			width: 28%
 			top: 92px
@@ -592,7 +595,7 @@ section
 			z-index: 1
 		.img-3
 			clip-path: polygon(19% 0, 100% 0, 100% 100%, 0% 100%)
-			background-color: #888888
+			background-color: $font-green !important
 			height: 185px
 			width: 46%
 			top: 229px
@@ -602,7 +605,7 @@ section
 			z-index: -99999
 		.img-4
 			clip-path: polygon(13% 0, 89% 0, 73% 100%, 0 100%)
-			background-color: #888888
+			background-color: $font-green !important
 			height: 62px
 			width: 19%
 			top: 388px
@@ -664,9 +667,11 @@ section
 		display: none
 		+breakpoint($xxs-to-lg)
 			display: block
-			margin-top: 1.5em
+			margin: 1.5em 0 0 0em
 			width: 100%
-	.tab-content
+		+breakpoint($sm-to-lg)
+			margin: 1.5em 0 0 1em
+	.tab-content-1
 		width: 100%
 		.form
 			.flex
@@ -690,7 +695,7 @@ section
 .new-section-4
 	display: flex
 	padding: 0
-	margin-top: 6em
+	margin-top: 8.2em
 	+breakpoint($xxs-to-lg)
 		margin-top: $spacing !important
 	h1
@@ -698,7 +703,7 @@ section
 		width: 100%
 		text-transform: uppercase
 		font-size: 37px
-		margin:  30px 0 0 28px
+		margin:  40px 0 0 28px
 		line-height: 1.29em
 		+breakpoint($xxs-to-lg)
 			width: 100%
@@ -706,7 +711,7 @@ section
 	//text-align: center
 	.flex
 		justify-content: flex-start
-		margin: 0 auto
+		margin: 0.45em auto
 		width: 93%
 		display: flex
 		flex-direction: row
@@ -729,13 +734,16 @@ section
 				width: 130px
 				height: 130px
 				margin: 0 auto
-				border: 4px solid black
+				border: 1px solid black
 				border-radius: 340px
 			h5
 				text-transform: uppercase
+				color: $font-green
 			p
 				margin-top: -20px
 				font-size: 15px
+				color: $font-gray
+
 
 /* section specialization => Fifth Section - Contact */
 .new-section-5
@@ -746,7 +754,7 @@ section
 		margin-top: $spacing !important
 
 	h1
-		margin: 1.5em 0 0 0.7em
+		margin: 1.1em 0 0 0.75em
 		font-family: 'lato-black'
 		font-size: 37px
 		text-transform: uppercase
@@ -755,6 +763,11 @@ section
 	.content
 		margin-top: 3em
 		width: 100%
+		p
+			margin: 32px 0 0 0
+		+breakpoint($xxs-to-lg)
+		margin: 7px 0 0 0
+
 
 aside
 	width: 30%
@@ -792,6 +805,7 @@ aside
 				padding: #{$half-spacing / 1.2}
 				display: block
 				margin-top: 8px
+				color: $font-green
 
 				&.active::before
 					font-family: 'FontAwesome', sans-serif
@@ -824,7 +838,7 @@ aside
 	width: 70%
 	float: left
 	box-sizing: border-box
-	margin-top: 15px
+	margin-top: 10px
 
 	+breakpoint($xxs-to-lg)
 		width: 100%
@@ -839,12 +853,12 @@ aside
 .accordion-header
 	cursor: pointer
 	border-top: 2px solid $background-variant
-	color: $primary-color
+	color: $font-gray
 	font-feature-settings: "kern", "liga", "dlig", "hlig", "cswh"
 	font-synthesis: weight style
 	font-family: 'Aleo', sans-serif
 	font-size: 20px
-	color: $primary-color
+	color: $font-gray
 	letter-spacing: 0.021em
 	vertical-align: top
 	padding: #{$half-spacing / 1.2} 0 #{$half-spacing / 1.2} 0
@@ -890,9 +904,7 @@ form
 			right: $half-spacing
 			top: #{$half-spacing / 1.6}
 			font-size: 17px !important
-			color: #8085cb
-
-
+			color: $font-gray
 	select
 		padding: 0
 		margin: 0
@@ -917,18 +929,21 @@ form
 	input, select, option
 		width: 95%
 		padding: #{$half-spacing / 2} #{$half-spacing / 2} #{$half-spacing / 2} $half-spacing
-		border: 1px solid #8085cb
+		border: 1px solid $font-gray
 		border-radius: 6px
 		box-sizing: border-box
 		margin-bottom: $half-spacing
-		margin-left: 8px
+		margin: 20px 0 0 10px
 		transform: scale(1)
 		transition: transform .2s ease-in-out
-		color: $font-color
+		color: $font-gray !important
+		+breakpoint($xxs-to-lg)
+			width: 95%
+			margin: 15px 0 0 10px
 
 		&:active, &:focus
 			outline: 0
-			border: 1px solid $primary-color
+			border: 1px solid $font-gray
 			transform: scale(1.03)
 			box-shadow: 0 0 3px #ddd
 		+breakpoint($xxs-to-lg)
@@ -937,7 +952,7 @@ form
 	textarea
 		width: 95%
 		height: 200px
-		border: 1px solid #8085cb
+		border: 1px solid $font-gray
 		text-align: left
 		padding: #{$half-spacing / 1.5} $half-spacing $half-spacing
 		border-radius: 6px
@@ -946,25 +961,40 @@ form
 		margin-bottom: $half-spacing
 		transform: scale(1)
 		transition: transform .2s ease-in-out
-		color: $font-color
-
+		color: $font-gray !important
+		+breakpoint($xxs-to-lg)
+			margin: 15px 0 0 10px
 
 		&:active, &:focus
 			outline: 0
-			border: 1px solid $primary-color
+			border: 1px solid $font-gray
 			transform: scale(1.03)
 			box-shadow: 0 0 3px #ddd
 
 	.flex
-		margin-top: 10px
+		margin-top: 5px
+		color: $font-gray !important
+		#tel
+			margin: 20px 30px 0 0px
+		+breakpoint($xxs-to-lg)
+			#tel
+				margin: 0px 0px 0 10px
+
 		input
 			width: 45%
-			&:last-child
-				margin-right: 30px
+			color: $font-gray !important
+			margin: 20px 0 0 10px
+
+			+breakpoint($xxs-to-lg)
+				width: 95%
+				margin: 15px 0 0 10px
+
+
+
 
 .fas, .fab
 	font-size: 12px !important
-
+	color: $font-gray
 	&.left
 		margin-right: 6px
 		top: -2px
@@ -983,17 +1013,21 @@ form
 	box-sizing: border-box
 	padding: #{$half-spacing / 2.5} $half-spacing #{$half-spacing / 2.5}
 	width: 95%
-	border: 1px solid $primary-color
-	color: $primary-color
+	border: 1px solid #68d5b4
+	color: white
 	text-align: center
 	display: inline-block
 
 	&.fill
-		background-color: $primary-color
+		background-color: #68d5b4
 		color: #fff
-		margin: 0 0 0 10px
-	+breakpoint($xxs-to-lg)
-		border-radius: 6px
+		text-transform: uppercase
+		font-weight: 600
+		margin: 0px 0 0 14px
+		+breakpoint($xxs-to-lg)
+			border-radius: 6px
+			width: 95%
+			margin: 10px 0 0 10px
 
 
 
@@ -1084,28 +1118,30 @@ footer
 			width: 20%
 			margin: 0.5em auto
 			img
-				margin: 1em auto
+				margin: 0.95em auto
 			+breakpoint($xxs-to-lg)
 				width: 100%
 
 		.content
-			width: 30%
-			margin: 0.5em auto
+			width: 28%
+			margin: 1em auto
 
-			h4
+			h6
+				text-transform: uppercase
 
 			div
 
 			span
 
 				margin-left: 15px
+
 			+breakpoint($xxs-to-lg)
 				width: 100%
 
 	.ending
 		border-top: #d7d7d8 2px solid
 		padding-top: $half-spacing
-		width: 95%
+		width: 90%
 		margin: 0 auto
 		+breakpoint($xxs-to-lg)
 			width: 100%
