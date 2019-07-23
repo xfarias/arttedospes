@@ -602,7 +602,7 @@ section {
         .new-section-3 .tab-content-1 .form .flex {
           flex-direction: column; } }
       .new-section-3 .tab-content-1 .form .flex article {
-        border: 1px solid #7b7b7b;
+        border: 1px solid gray;
         width: 30%;
         height: 370px; }
         @media screen and (min-width: 0) and (max-width: 899px) {

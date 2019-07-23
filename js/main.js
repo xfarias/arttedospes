@@ -5,7 +5,7 @@ $('body').on('click', '.tabs a', function (e) {
 
   $('.tabs a.active').removeClass('active');
   $(this).addClass('active');
-  $('.form.active').removeClass('active');
+  $('.tab-content .form.active').removeClass('active');
   $($(this).data('to')).addClass('active');
   $('#choose-form').val($(this).data('to'))
 });
@@ -20,7 +20,7 @@ $('body').on('change', '#choose-form', function (e) {
   $('.tabs a.active').removeClass('active');
   $('.tabs a[data-to="'+ $(this).val() +'"]').addClass('active');
 
-  $('.form.active').removeClass('active');
+  $('.tab-content .form.active').removeClass('active');
   $($(this).val()).addClass('active')
 
 });
