@@ -350,13 +350,17 @@ header
 	position: relative
 	z-index: 9999
 	width: 100%
-	//margin-bottom: 360px
+	margin-bottom: 360px
 	border: 1px solid white
 	background-color: #fff
 
 	+breakpoint($xs)
 		padding: 0 #{$spacing / 2} #{$spacing / 2}
 
+	+breakpoint($xxs-to-lg)
+		margin-bottom: 520px
+	+breakpoint($sm-to-lg)
+		margin-bottom: 560px
 
 h1, h2
 	font-language-override: normal
@@ -708,11 +712,19 @@ section
 				+breakpoint($xxs-to-lg)
 					flex-direction: column
 				article
-					border: 1px solid gray
+					border: 1px solid white
 					width: 30%
 					height: 370px
+					padding: 0 auto !important
+					img 
+						height: 100%
+						width: 100%
 					+breakpoint($xxs-to-lg)
 						width: 100%
+						img
+							height: 100%
+							width: 100%
+
 
 
 
@@ -763,7 +775,7 @@ section
 				width: 130px
 				height: 130px
 				margin: 0 auto
-				border: 1px solid black
+				border: 1px solid white
 				border-radius: 340px
 
 			h5
@@ -1113,7 +1125,6 @@ article
 	background-color: $background-variant
 	border-radius: 5px
 	box-sizing: border-box
-	padding: ($half-spacing - 5) ($half-spacing - 5) ($half-spacing - 5) $spacing + $half-spacing
 	margin-bottom: $half-spacing
 	transition: transform .2s ease-in-out, min-width .4s ease-in-out, min-height .4s ease-in-out, background-color .3s ease-in-out, left .2s ease-in-out, top .4s ease-in-out
 	cursor: pointer
@@ -1136,7 +1147,7 @@ article
 footer
 	padding: $half-spacing
 	background: $background-variant
-	//position: fixed
+	position: fixed
 	box-sizing: border-box
 	width: 100%
 	z-index: 0

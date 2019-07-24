@@ -265,11 +265,18 @@ header {
   position: relative;
   z-index: 9999;
   width: 100%;
+  margin-bottom: 360px;
   border: 1px solid white;
   background-color: #fff; }
   @media screen and (max-width: 450px) {
     .container {
       padding: 0 31.5px 31.5px; } }
+  @media screen and (min-width: 0) and (max-width: 899px) {
+    .container {
+      margin-bottom: 520px; } }
+  @media screen and (min-width: 451px) and (max-width: 899px) {
+    .container {
+      margin-bottom: 560px; } }
 
 h1, h2 {
   font-language-override: normal;
@@ -602,12 +609,19 @@ section {
         .new-section-3 .tab-content-1 .form .flex {
           flex-direction: column; } }
       .new-section-3 .tab-content-1 .form .flex article {
-        border: 1px solid gray;
+        border: 1px solid white;
         width: 30%;
-        height: 370px; }
+        height: 370px;
+        padding: 0 auto !important; }
+        .new-section-3 .tab-content-1 .form .flex article img {
+          height: 100%;
+          width: 100%; }
         @media screen and (min-width: 0) and (max-width: 899px) {
           .new-section-3 .tab-content-1 .form .flex article {
-            width: 100%; } }
+            width: 100%; }
+            .new-section-3 .tab-content-1 .form .flex article img {
+              height: 100%;
+              width: 100%; } }
 
 /* section specialization => Third Section  - Specialities */
 .new-section-4 {
@@ -655,7 +669,7 @@ section {
         width: 130px;
         height: 130px;
         margin: 0 auto;
-        border: 1px solid black;
+        border: 1px solid white;
         border-radius: 340px; }
       .new-section-4 .flex .box h5 {
         text-transform: uppercase;
@@ -954,7 +968,6 @@ article {
   background-color: #ededef;
   border-radius: 5px;
   box-sizing: border-box;
-  padding: 26.5px 26.5px 26.5px 94.5px;
   margin-bottom: 31.5px;
   transition: transform 0.2s ease-in-out, min-width 0.4s ease-in-out, min-height 0.4s ease-in-out, background-color 0.3s ease-in-out, left 0.2s ease-in-out, top 0.4s ease-in-out;
   cursor: pointer; }
@@ -972,6 +985,7 @@ article {
 footer {
   padding: 31.5px;
   background: #ededef;
+  position: fixed;
   box-sizing: border-box;
   width: 100%;
   z-index: 0;
