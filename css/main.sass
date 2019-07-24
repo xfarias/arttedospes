@@ -358,9 +358,24 @@ header
 		padding: 0 #{$spacing / 2} #{$spacing / 2}
 
 	+breakpoint($xxs-to-lg)
-		margin-bottom: 520px
+		margin-bottom: 540px
 	+breakpoint($sm-to-lg)
-		margin-bottom: 560px
+		margin-bottom: 580px
+
+	&::after
+		content: ''
+		position: absolute
+		left: 0
+		right: 0
+		height: 50px
+		background-color: #fff
+		transform: translate(0,40px)
+		border-radius: 60px
+		box-shadow: 0 40px 90px -23px #000
+		+breakpoint($xxs-to-lg)
+			margin-top: -30px
+		+breakpoint($sm-to-lg)
+			margin-top: -10px
 
 h1, h2
 	font-language-override: normal
@@ -472,8 +487,8 @@ section
 	h1
 
 		width: 80%
-		font-family: 'lato-black'
-		font-weight: 600
+		font-family: 'lato'
+		font-weight: 900
 		margin: 95px 0 0 70px
 		font-size: 44px
 		text-transform: uppercase
@@ -482,6 +497,7 @@ section
 			width: 100%
 			text-align: left
 			font-size: 38px
+			line-height: 1.1em
 
 	p
 
@@ -552,8 +568,8 @@ section
 
 	h1
 		width: 80%
-		font-family: 'lato-black'
-		font-weight: 600
+		font-family: 'lato'
+		font-weight: 900
 		margin: 40px 0 0 22px
 		font-size: 40px
 		line-height: 1.15em
@@ -564,6 +580,7 @@ section
 			width: 100%
 			text-align: left
 			font-size: 38px
+			line-height: 1.1em
 
 	p
 		width: 80%
@@ -584,7 +601,6 @@ section
 	+breakpoint($sm-to-lg)
 		flex-direction: row
 		margin-top: $triple-spacing
-
 	.container-img
 		height: 460px
 		flex: 1
@@ -663,7 +679,8 @@ section
 		text-transform: uppercase
 		margin: 65px 0 0 25px
 		font-size: 37px
-		font-family: 'lato-black'
+		font-family: 'lato'
+		font-weight: 900
 		+breakpoint($xxs-to-lg)
 			margin: 0 auto
 			width: 100%
@@ -673,6 +690,7 @@ section
 		ul
 			list-style: none
 			height: 60px
+			max-width: 660px
 			display: flex
 			flex-wrap: wrap
 			width: 87%
@@ -714,7 +732,7 @@ section
 				article
 					border: 1px solid white
 					width: 30%
-					height: 370px
+					height: 400px
 					padding: 0 auto !important
 					img 
 						height: 100%
@@ -738,7 +756,8 @@ section
 		margin-top: $spacing !important
 
 	h1
-		font-family: 'lato-black'
+		font-family: 'lato'
+		font-weight: 900
 		width: 100%
 		text-transform: uppercase
 		font-size: 37px
@@ -798,7 +817,8 @@ section
 
 	h1
 		margin: 1.1em 0 0 0.75em
-		font-family: 'lato-black'
+		font-family: 'lato'
+		font-weight: 900
 		font-size: 37px
 		text-transform: uppercase
 		+breakpoint($xxs-to-lg)
@@ -835,6 +855,7 @@ aside
 			font-feature-settings: "kern", "liga", "dlig", "hlig", "cswh"
 			font-synthesis: weight style
 			font-family: 'lato-black', sans-serif
+			font-weight: 900
 			font-size: 16px
 			color: $primary-color
 			letter-spacing: 0.021em
@@ -1074,7 +1095,7 @@ form
 		color: #fff
 		text-transform: uppercase
 		font-weight: 600
-		margin: 0px 0 0 14px
+		margin: 0px 0 0 7px
 		+breakpoint($xxs-to-lg)
 			border-radius: 6px
 			width: 95%
@@ -1257,7 +1278,8 @@ footer
 					color: white
 					margin-left: 30px
 					text-transform: uppercase
-					font-family: 'lato-black'
+					font-family: 'lato'
+					font-weight: 900
 
 
 .tabb
