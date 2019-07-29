@@ -27,10 +27,10 @@ $('body').on('change', '#choose-form', function (e) {
 
 
 /* Sandwich Menu  */
-$('body').on('click touchend', '.sandwich .icon', function(e) {
+$('body').on('click ', '.sandwich .icon', function(e) {
   $(this).toggleClass('opened');
   $('.menu-full').toggleClass('opened');
-  $('body').toggleClass('opened');
+  $('body').toggleClass('closed');
 });
 
 /* Menu  link to sections*/

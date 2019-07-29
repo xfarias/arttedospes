@@ -15,6 +15,7 @@ $sm: (min: 451px)
 $md: (min: 600px)
 $lg: (min: 900px)
 $xl: (min: 1000px)
+$xll: (min: 1100px)
 $xxl: (min: 1200px)
 $xxxl: (min: 1400px)
 $til-xl: (max: 1180px)
@@ -23,8 +24,13 @@ $xxs-to-sm: (min: map-get($sm, min), max: map-get($md, min) - 1)
 $md-only: (min: map-get($md, min), max: map-get($lg, min) - 1)
 $lg-only: (min: map-get($lg, min), max: map-get($xl, min) - 1)
 $xl-only: (min: map-get($xl, min), max: map-get($xxl, min) - 1)
+$xxxl-only: (min: map-get($xxl, min), max: map-get($xxxl, min) - 1)
 $xxs-to-lg: (min: 0, max: map-get($lg, min) - 1)
 $xxs-to-sm: (min: 0, max: map-get($sm, min) - 1)
+$xl-to-md: (min: map-get($md, min), max: map-get($xl, min) - 1)
+$xxs-to-xl: (min: map-get($sm, min), max: map-get($xl, min) - 1)
+$md-to-lg : (min: map-get($md, min), max: map-get($lg, min) - 1)
+$xll-to-lg:  (min: map-get($lg, min), max: map-get($xll, min) - 1)
 $lg-to-xxl: (min: map-get($lg, min), max: map-get($xxl, min) - 1)
 $sm-to-md: (min: map-get($sm, min), max: map-get($md, min) - 1)
 $sm-to-lg: (min: map-get($sm, min), max: map-get($lg, min) - 1)
@@ -221,7 +227,6 @@ nav
 		+breakpoint($sm-to-lg)
 			display: none
 			border: 1px solid black
-
 		li
 			a
 				color: $white
@@ -267,8 +272,6 @@ header
 
 	.container
 		margin: 0
-
-
 		&::after
 			content: none
 
@@ -305,18 +308,16 @@ header
 
 .sandwich
 	display: none
-
+	cursor: pointer
 	.icon
 		color: #fff
 		display: inline-block
 		text-align: right
 		position: relative
-
-
 		.bar1, .bar2, .bar3
 			width: 25px
 			height: 2px
-			background-color: $color-blue
+			background-color: $font-green
 			margin: 5px 0
 
 			transition: 0.3s ease-out
@@ -325,7 +326,6 @@ header
 			.bar1
 				-webkit-transform: rotate(-45deg) translate(-2px, 6px)
 				transform: rotate(-45deg) translate(-2px, 6px)
-
 			.bar2
 				opacity: 0
 
@@ -336,8 +336,8 @@ header
 	+breakpoint($xxs-to-lg)
 		display: block
 		position: absolute
-		top: 20px
-		right: 30px
+		top: 18px
+		right: 20px
 		z-index: 9999999
 	+breakpoint($sm-to-lg)
 		display: none
@@ -346,10 +346,11 @@ header
 
 .container
 	box-sizing: border-box
-	padding: 0px $spacing $spacing
+	padding: 0px ($double-spacing - 36px) $spacing
 	position: relative
 	z-index: 9999
 	width: 100%
+	max-width: 1500px
 	margin-bottom: 360px
 	border: 1px solid white
 	background-color: #fff
@@ -359,6 +360,7 @@ header
 
 	+breakpoint($xxs-to-lg)
 		margin-bottom: 540px
+		padding: 0px ($double-spacing - 58.5) $spacing
 	+breakpoint($sm-to-lg)
 		margin-bottom: 580px
 
@@ -411,30 +413,22 @@ section
 	+breakpoint($xxs-to-lg)
 		padding: $spacing 0
 
-
 	+breakpoint($xl)
 		padding: $double-spacing ($spacing + $half-spacing)
 
-
 	&:first-of-type
 		padding-top: $spacing * 2 + $half-spacing
-
 		+breakpoint($xs)
 			padding-top: $half-spacing
-
-
 		+breakpoint($xl-only)
 			padding-top: $spacing + $half-spacing
-
 	&:last-of-type
 		border-bottom: 0
 		padding-bottom: 70px
 
 	h1
 		width: 320px
-
 		position: relative
-
 		+breakpoint($xxs-to-lg)
 			width: 100%
 			font-size: 30px
@@ -442,8 +436,7 @@ section
 
 
 	.content
-		flex: 0.95
-
+		flex: 0.915
 		+breakpoint($xxs-to-lg)
 			width: 100%
 			margin-top: $half-spacing
@@ -454,7 +447,7 @@ section
 
 
 		p
-			margin: 8px 0 0 0
+			margin: 8px 0 0 4px
 
 			&:nth-child(2)
 				margin: 30px 0 0 0
@@ -473,7 +466,14 @@ section
 
 .clearflex
 	width: 100%
-	margin-top: $spacing
+	margin: 26px
+	display: flex
+	flex-flow: row nowrap
+	align-items: flex-start
+	justify-items: center
+	+breakpoint($xxs-to-lg)
+		flex-flow: column nowrap
+		margin: 30px 0 0 0
 
 
 /* section specialization => First Section - Presentation */
@@ -486,7 +486,7 @@ section
 
 	h1
 
-		width: 80%
+		width: 100% !important
 		font-family: 'lato'
 		font-weight: 900
 		margin: 95px 0 0 70px
@@ -498,7 +498,8 @@ section
 			text-align: left
 			font-size: 38px
 			line-height: 1.1em
-
+		+breakpoint($sm-to-lg)
+			margin: 95px 0 0 0 !important
 	p
 
 		width: 70%
@@ -529,25 +530,25 @@ section
 			display: none
 
 		.img-1
-			clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%)
+			clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%)
 			background-color: $font-green !important
-			height: 320px
-			width: 80%
+			height: 318px
+			width: 85%
 			border-radius: 5px
-			margin: 62px 0 0 30px
+			margin: 62px 0 0 0px
 			position: relative
 			z-index: -9999
 
 		.img-2
 			position: absolute
 			background-color: $font-green-light !important
-			height: 325px
-			width: 80%
+			height: 328px
+			width: 84%
 			z-index: 1
 			border-radius: 3px
-			top: 130px
-			left: 100px
-			clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%)
+			top: 133px
+			left: 77px
+			clip-path: polygon(0 0, 100% 0, 84% 100%, 0% 100%)
 
 	.container-text
 		height: 460px
@@ -560,17 +561,19 @@ section
 
 /* section specialization => Second Section - History */
 .new-section-2
-	margin-top: $triple-spacing + 2px
+	margin-top: $triple-spacing + 12px
 	display: flex
 	padding: 0
+	border-bottom:  1px solid #ededef
 	+breakpoint($xxs-to-lg)
 		margin-top: $spacing !important
+		border-bottom: none
 
 	h1
 		width: 80%
 		font-family: 'lato'
 		font-weight: 900
-		margin: 40px 0 0 22px
+		margin: 31px 0 0 0px
 		font-size: 40px
 		line-height: 1.15em
 		letter-spacing: -0.03em
@@ -584,7 +587,7 @@ section
 
 	p
 		width: 80%
-		margin: 65px 0 0 22px
+		margin: 65px 0 0 0px
 		line-height: 1.35em
 		+breakpoint($xxs-to-lg)
 			margin: 20px auto
@@ -594,7 +597,6 @@ section
 
 	&:first-of-type
 		padding-top: 0
-
 	+breakpoint($xxs-to-lg)
 		margin-top: $double-spacing
 		flex-direction: column
@@ -607,26 +609,27 @@ section
 		width: 100%
 		position: relative
 		display: flex
+		margin-bottom: 10em !important
 		+breakpoint($xxs-to-lg)
 			display: none
 
 		.img-1
 			clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%)
 			background-color: $font-green-light !important
-			height: 290px
-			width: 71%
+			height: 289px
+			width: 75%
 			border: 1px solid $font-green-light
 			border-radius: 5px
-			margin: 42px 0 0 55px
+			margin: 33px 0 0 55px
 			position: absolute
 			z-index: -999
 
 		.img-2
-			clip-path: polygon(13% 0, 98% 0, 83% 100%, 0% 100%)
+			clip-path: polygon(13% 0, 100% 0, 89% 100%, 0% 100%)
 			background-color: $font-green !important
 			height: 94px
 			width: 28%
-			top: 92px
+			top: 84px
 			left: 40px
 			border-radius: 5px
 			position: absolute
@@ -635,9 +638,9 @@ section
 		.img-3
 			clip-path: polygon(19% 0, 100% 0, 100% 100%, 0% 100%)
 			background-color: $font-green !important
-			height: 185px
-			width: 46%
-			top: 229px
+			height: 187px
+			width: 48%
+			top: 219px
 			left: 280px
 			border-radius: 5px
 			position: relative
@@ -646,9 +649,9 @@ section
 		.img-4
 			clip-path: polygon(13% 0, 89% 0, 73% 100%, 0 100%)
 			background-color: $font-green !important
-			height: 62px
-			width: 19%
-			top: 388px
+			height: 65px
+			width: 21% !important
+			top: 378px
 			left: 110px
 			border-radius: 5px
 			position: absolute
@@ -669,7 +672,7 @@ section
 
 /* section specialization => Third Section - Services*/
 .new-section-3
-	margin-top: $quad-spacing
+	margin-top: $spacing
 	display: flex
 	padding: 0
 	+breakpoint($xxs-to-lg)
@@ -677,7 +680,7 @@ section
 
 	h1
 		text-transform: uppercase
-		margin: 65px 0 0 25px
+		margin: 65px 0 0px 0px
 		font-size: 37px
 		font-family: 'lato'
 		font-weight: 900
@@ -686,74 +689,108 @@ section
 			width: 100%
 			text-align: left
 			font-size: 38px
+		+breakpoint($lg-to-xxl)
+			width: 25%
 	.content
+		width: 100%
 		ul
-			list-style: none
-			height: 60px
-			max-width: 660px
-			display: flex
-			flex-wrap: wrap
-			width: 87%
-			margin: 65px auto
-			border-radius: 5px
 			border: 1px solid #ededef
+			margin: 3.5em auto
+			padding: 0
+			display: flex
+			flex-flow: row nowrap
+			align-items: center
+			justify-items: center
+			list-style: none
+			border-radius: 5px
 			li
-				padding: 10px
-				font-weight: 600
-				font-size: 13px
-				text-transform: uppercase
-				margin-top: 13px
+				list-style: none
+				flex-wrap: nowrap !important
+				text-align: center
+				font-size: 11px
+				flex-grow:  1
 				a
+					padding: 1.8em !important
+					display: block
+					text-transform: uppercase
 					color: $font-gray
+					font-weight: 600
+
 					&:hover
 						color: $font-green
+					&:visited
+						color: $font-green-light
+		+breakpoint($xxs-to-xl)
+			display: none
 		+breakpoint($xxs-to-lg)
 			display: none
 
+
 	.select-1
 		display: none
+		+breakpoint($xxs-to-xl)
+			display: block
+			margin: 4em 0 0 0em
+			width: 65%
+
 		+breakpoint($xxs-to-lg)
 			display: block
 			margin: 1.5em 0 0 0em
 			width: 100%
-		+breakpoint($sm-to-lg)
-			margin: 1.5em 0 0 1em
+
+
 	.tab-content-1
 		width: 100%
+		margin: 0 auto
+		+breakpoint($xl-to-md)
+			width: 100%
+		+breakpoint($lg-to-xxl)
+			width: 100%
+		+breakpoint($sm-to-lg)
+			width: 100%
+		p
+			width: 100%
+			text-align: right
 		.form
 			.flex
 				display: flex
 				flex-direction: row
 				flex-wrap: wrap
-				width: 95%
-				margin: 1em auto
+				width: 100%
+				margin: 0 auto
 				+breakpoint($xxs-to-lg)
 					flex-direction: column
 				article
-					border: 1px solid white
+					border: 1px solid black
 					width: 30%
-					height: 400px
+					display: flex
+					align-items: center
+					height: 382px
 					padding: 0 auto !important
-					img 
+					+breakpoint($xxs-to-sm)
+						width: 100%
+						margin: 5px 0 0 0
+					+breakpoint($sm-to-lg)
+						outline: 1px solid black
+						margin: 1em auto
+						width: 100%
+						background-color: $font-gray
+					img
 						height: 100%
 						width: 100%
+
 					+breakpoint($xxs-to-lg)
-						width: 100%
-						img
-							height: 100%
-							width: 100%
-
-
-
 
 /* section specialization => Third Section  - Specialities*/
 .new-section-4
 	display: flex
-
 	padding: 0
 	margin-top: 8.2em
+	border-bottom:  1px solid #ededef
+
 	+breakpoint($xxs-to-lg)
 		margin-top: $spacing !important
+		border-bottom: none
 
 	h1
 		font-family: 'lato'
@@ -761,40 +798,38 @@ section
 		width: 100%
 		text-transform: uppercase
 		font-size: 37px
-		margin: 40px 0 0 28px
-		line-height: 1.29em
+		margin: 34px 0 0 2px
+		line-height: 1.1em
 		+breakpoint($xxs-to-lg)
 			width: 100%
 			margin: 0 !important
-	//text-align: center
+
 	.flex
 		justify-content: flex-start
 		margin: 0.45em auto
-		width: 93%
+		width: 100%
+		align-items: center
+		margin-bottom: 5em !important
 		display: flex
 		flex-direction: row
 		+breakpoint($xxs-to-lg)
-			flex-direction: column
-			margin-top: 3em
+			flex-wrap: wrap
 
 		.box
-			width: 20%
+			width: auto
 			box-sizing: border-box
 			text-align: center
 			padding: 0 $half-spacing
-			margin: $spacing auto
+			margin: $spacing 0 0 0
 			flex-basis: auto
+
 			/* default value */
 			flex-grow: 1
-			+breakpoint($xxs-to-lg)
-				margin: 0 auto
-				width: 100%
 
 			.rounded
 				width: 130px
 				height: 130px
 				margin: 0 auto
-				border: 1px solid white
 				border-radius: 340px
 
 			h5
@@ -811,44 +846,59 @@ section
 .new-section-5
 	display: flex
 	padding: 0
-	margin-top: $triple-spacing
+	margin: ($triple-spacing - 10px )0 0 0
 	+breakpoint($xxs-to-lg)
 		margin-top: $spacing !important
-
 	h1
-		margin: 1.1em 0 0 0.75em
+
 		font-family: 'lato'
 		font-weight: 900
 		font-size: 37px
 		text-transform: uppercase
+		width: 29% !important
+		margin-top: 5px !important
 		+breakpoint($xxs-to-lg)
-			margin: 0 !important
+			margin: 0 0 0 0 !important
+			width: 100% !important
+
 
 	.content
-		margin-top: 3em
-		width: 100%
+		+breakpoint($xll-to-lg)
+			margin-left: 47px !important
 
 		p
-			margin: 32px 0 0 0
-		+breakpoint($xxs-to-lg)
-		margin: 7px 0 0 0
 
+			+breakpoint($lg-to-xxl)
+				width: 78%
+			+breakpoint($xxs-to-lg)
+				p
+					margin: 28px auto !important
+					width: 100%
+			+breakpoint($xxs-to-sm)
+					width: 100%
 
 aside
-	width: 30%
+	width: 34%
 	float: left
 	box-sizing: border-box
-
+	+breakpoint($xll-to-lg)
+		width: 40%
 	+breakpoint($xxs-to-lg)
 		width: 100%
+
+
 
 	.select
 		display: none
 
 		+breakpoint($xxs-to-lg)
 			display: block
+			width: 100%
+			position: relative
+			top: 20px
 
 	.tabs
+		padding: 0 !important
 		li
 			list-style: none
 			//border-bottom: 2px solid #ededef
@@ -861,7 +911,9 @@ aside
 			letter-spacing: 0.021em
 			vertical-align: top
 			position: relative
+			margin: 0 auto !important
 			text-transform: uppercase
+
 
 
 			+breakpoint($xxs-to-lg)
@@ -872,6 +924,7 @@ aside
 				display: block
 				margin-top: 8px
 				color: $font-green
+
 
 				&.active::before
 					font-family: 'FontAwesome', sans-serif
@@ -901,13 +954,14 @@ aside
 				border-top: 0
 
 .tab-content
-	width: 70%
+	width: 60% !important
 	float: left
 	box-sizing: border-box
-	margin-top: 10px
+	margin: 30px auto !important
+	//margin-left: 30px !important
 
 	+breakpoint($xxs-to-lg)
-		width: 100%
+		width: 100% !important
 		padding: 0
 
 	.form
@@ -922,9 +976,10 @@ aside
 	color: $font-gray
 	font-feature-settings: "kern", "liga", "dlig", "hlig", "cswh"
 	font-synthesis: weight style
-	font-family: 'Aleo', sans-serif
+	font-family: 'lato'
 	font-size: 20px
 	color: $font-gray
+	margin-left: 15px
 	letter-spacing: 0.021em
 	vertical-align: top
 	padding: #{$half-spacing / 1.2} 0 #{$half-spacing / 1.2} 0
@@ -963,7 +1018,7 @@ form
 	.button
 		+breakpoint($xxs-to-lg)
 			width: 100%
-
+			margin: 0 auto
 	.select
 		position: relative
 		width: auto
@@ -997,23 +1052,24 @@ form
 
 
 	input, select, option
-		width: 95%
+		width: 100%
 		padding: #{$half-spacing / 2} #{$half-spacing / 2} #{$half-spacing / 2} $half-spacing
-		border: 1px solid $font-gray
+		border: 0.8px solid #ededef
 		border-radius: 6px
 		box-sizing: border-box
 		margin-bottom: $half-spacing
-		margin: 20px 0 0 10px
+		//margin: 20px 0 0 10px
 		transform: scale(1)
 		transition: transform .2s ease-in-out
 		color: $font-gray !important
 		+breakpoint($xxs-to-lg)
-			width: 95%
-			margin: 15px 0 0 10px
+			width: 100% !important
+
+			margin: 15px auto !important
 
 		&:active, &:focus
 			outline: 0
-			border: 1px solid $font-gray
+			border: 0.8px solid #ededef
 			transform: scale(1.03)
 			box-shadow: 0 0 3px #ddd
 
@@ -1021,24 +1077,25 @@ form
 			border-radius: 6px
 
 	textarea
-		width: 95%
+		width: 100%
 		height: 200px
-		border: 1px solid $font-gray
+		border: 0.8px solid #ededef
 		text-align: left
 		padding: #{$half-spacing / 1.5} $half-spacing $half-spacing
 		border-radius: 6px
-		margin: 20px 0 0 10px
+		//margin: 20px 0 0 0px !important
 		box-sizing: border-box
 		margin-bottom: $half-spacing
 		transform: scale(1)
 		transition: transform .2s ease-in-out
 		color: $font-gray !important
 		+breakpoint($xxs-to-lg)
-			margin: 15px 0 0 10px
+			width: 100% !important
+			margin: 15px auto !important
 
 		&:active, &:focus
 			outline: 0
-			border: 1px solid $font-gray
+			border: 1px solid #ededef
 			transform: scale(1.03)
 			box-shadow: 0 0 3px #ddd
 
@@ -1084,22 +1141,24 @@ form
 	border-radius: 7px
 	box-sizing: border-box
 	padding: #{$half-spacing / 2.5} $half-spacing #{$half-spacing / 2.5}
-	width: 95%
+	width: 101%
 	border: 1px solid #68d5b4
 	color: white
 	text-align: center
 	display: inline-block
-
+	+breakpoint($xxs-to-lg)
+		width: 100% !important
+		margin: 0 auto !important
 	&.fill
 		background-color: #68d5b4
 		color: #fff
 		text-transform: uppercase
 		font-weight: 600
-		margin: 0px 0 0 7px
+		margin: 0px 0 0 0px
 		+breakpoint($xxs-to-lg)
 			border-radius: 6px
-			width: 95%
-			margin: 10px 0 0 10px
+			width: 100%
+			margin: 10px auto
 
 
 /* section specialization */
@@ -1141,12 +1200,11 @@ form
 			border-radius: 100px
 
 
-article
-	width: calc(50% - #{$half-spacing /2})
+
 	background-color: $background-variant
 	border-radius: 5px
 	box-sizing: border-box
-	margin-bottom: $half-spacing
+	//margin-bottom: $half-spacing
 	transition: transform .2s ease-in-out, min-width .4s ease-in-out, min-height .4s ease-in-out, background-color .3s ease-in-out, left .2s ease-in-out, top .4s ease-in-out
 	cursor: pointer
 
@@ -1172,6 +1230,7 @@ footer
 	box-sizing: border-box
 	width: 100%
 	z-index: 0
+	max-width: 1500px
 	bottom: 0
 
 
