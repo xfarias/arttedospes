@@ -1139,6 +1139,7 @@ footer {
   height: 100%;
   background-color: #4c4c4c;
   z-index: 999999;
+  margin-left: 32px;
   color: #fff;
   box-sizing: border-box;
   -webkit-transition: transform 0s linear 0.2s, opacity 0.2s ease-in-out;
@@ -1155,7 +1156,7 @@ footer {
     -o-transition: opacity 0.2s ease-in-out;
     transition: opacity 0.2s ease-in-out;
     width: 100%;
-    margin: -4em 0 0 -21.5em;
+    margin: -6em 0 0 -21.5em;
     color: white;
     position: fixed; }
     .menu-full.opened ul {
