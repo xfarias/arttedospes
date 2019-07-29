@@ -355,8 +355,8 @@ header
 	border: 1px solid white
 	background-color: #fff
 
-	+breakpoint($xs)
-		padding: 0 #{$spacing / 2} #{$spacing / 2}
+	+breakpoint($xxs-to-sm)
+		padding: 0px ($spacing / 2 ) $spacing !important
 
 	+breakpoint($xxs-to-lg)
 		margin-bottom: 540px
@@ -447,8 +447,9 @@ section
 
 
 		p
-			margin: 8px 0 0 4px
-
+			margin: 8px 0 0 30px  !important
+			+breakpoint($xxs-to-lg)
+				margin: 8px 0 0 0 !important
 			&:nth-child(2)
 				margin: 30px 0 0 0
 
@@ -466,7 +467,7 @@ section
 
 .clearflex
 	width: 100%
-	margin: 26px
+	margin: 0px
 	display: flex
 	flex-flow: row nowrap
 	align-items: flex-start
@@ -879,14 +880,11 @@ section
 
 aside
 	width: 34%
-	float: left
 	box-sizing: border-box
 	+breakpoint($xll-to-lg)
 		width: 40%
 	+breakpoint($xxs-to-lg)
 		width: 100%
-
-
 
 	.select
 		display: none

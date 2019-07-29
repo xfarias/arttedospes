@@ -31,6 +31,7 @@ $('body').on('click ', '.sandwich .icon', function(e) {
   $(this).toggleClass('opened');
   $('.menu-full').toggleClass('opened');
   $('body').toggleClass('closed');
+
 });
 
 /* Menu  link to sections*/

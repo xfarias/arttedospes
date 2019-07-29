@@ -270,9 +270,9 @@ header {
   margin-bottom: 360px;
   border: 1px solid white;
   background-color: #fff; }
-  @media screen and (max-width: 450px) {
+  @media screen and (min-width: 0) and (max-width: 450px) {
     .container {
-      padding: 0 31.5px 31.5px; } }
+      padding: 0px 31.5px 63px !important; } }
   @media screen and (min-width: 0) and (max-width: 899px) {
     .container {
       margin-bottom: 540px;
@@ -362,7 +362,10 @@ section {
       section .content {
         margin-top: 15.75px; } }
     section .content p {
-      margin: 8px 0 0 4px; }
+      margin: 8px 0 0 30px !important; }
+      @media screen and (min-width: 0) and (max-width: 899px) {
+        section .content p {
+          margin: 8px 0 0 0 !important; } }
       section .content p:nth-child(2) {
         margin: 30px 0 0 0; }
 
@@ -378,7 +381,7 @@ section {
 
 .clearflex {
   width: 100%;
-  margin: 26px;
+  margin: 0px;
   display: flex;
   flex-flow: row nowrap;
   align-items: flex-start;
@@ -785,7 +788,6 @@ section {
 
 aside {
   width: 34%;
-  float: left;
   box-sizing: border-box; }
   @media screen and (min-width: 900px) and (max-width: 1099px) {
     aside {
