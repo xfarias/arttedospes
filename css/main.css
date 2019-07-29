@@ -276,7 +276,7 @@ header {
   @media screen and (min-width: 0) and (max-width: 899px) {
     .container {
       margin-bottom: 540px;
-      padding: 0px 67.5px 63px; } }
+      padding: 0px 37.5px 63px; } }
   @media screen and (min-width: 451px) and (max-width: 899px) {
     .container {
       margin-bottom: 580px; } }
